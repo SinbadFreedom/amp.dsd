@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/mongodb/basic/13.html">
-    <title>MongoDB查询绑定或嵌套的方法 - Mongodb中文手册 - 大屎蛋教程网</title>
-    <meta name="description" content="mongodb查询绑定或嵌套的方法.匹配一个绑定或嵌套的文档,mongodb查询一个嵌套数据字段,mongodb通过操作符匹配,mongodb多条件查询.">
+    <link rel="canonical" href="https://dashidan.com/article/redis/basic/2.html">
+    <title>redis常用命令</title>
+    <meta name="description" content="命令行连接Redis redis查看所有的key redis查看key的类型 redis删除key redis设置密码">
     <style amp-custom>
         html {
             -webkit-text-size-adjust: 100%;
@@ -2170,8 +2170,6 @@
       "datePublished": "2015-02-05T08:00:00+08:00"
     }
 
-
-
     </script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <style amp-boilerplate>body {
@@ -2247,62 +2245,109 @@
     <!-- 顶部面包屑导航-->
     <div class="text-left">
         <a href="https://amp.dashidan.com/index.html">首页</a> > <a
-            href="https://amp.dashidan.com/article/mongodb/index.html">mongodb</a> > MongoDB查询绑定或嵌套的方法
+            href="https://amp.dashidan.com/article/redis/index.html">redis</a> > Redis常用命令
     </div>
 
     <div class="dsd_content">
         <!-- 文章内容-->
-        <div class="dsd_title"><h1>MongoDB查询绑定或嵌套的方法</h1></div>
+        <div class="dsd_title"><h1>Redis常用命令</h1></div>
         <div id="xs_content_border">
             <div>
-                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 mongodb匹配一个绑定或嵌套的文档</a><br><a href="#2">2
-                    mongodb查询一个嵌套数据字段</a><br><a href="#2.1">&nbsp;&nbsp;2.1 通过字段值相等判断</a><br><a href="#2.2">&nbsp;&nbsp;2.2
-                    通过操作符匹配</a><br><a href="#2.3">&nbsp;&nbsp;2.3 mongodb多条件查询</a><br><a href="#3">3 参考文章</a><br><a
-                        href="#4">4 相关文章</a></div>
+                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 redis常用命令</a><br><a href="#1.1">&nbsp;&nbsp;1.1
+                    命令行连接Redis</a><br><a href="#1.2">&nbsp;&nbsp;1.2 redis查看所有的key</a><br><a href="#1.3">&nbsp;&nbsp;1.3
+                    redis查看key的类型</a><br><a href="#1.4">&nbsp;&nbsp;1.4 redis获取一个key</a><br><a href="#1.5">&nbsp;&nbsp;1.5
+                    redis删除key</a><br><a href="#1.6">&nbsp;&nbsp;1.6 redis返回满足给定patterm的所有key</a><br><a href="#1.7">&nbsp;&nbsp;1.7
+                    redis确认一个key是否存在</a><br><a href="#1.8">&nbsp;&nbsp;1.8 redis设置一个key的过期时间</a><br><a href="#1.9">&nbsp;&nbsp;1.9
+                    redis获取hash类型的全部数据</a><br><a href="#1.10">&nbsp;&nbsp;1.10 redis获取hash类型的一个数据</a><br><a
+                        href="#1.11">&nbsp;&nbsp;1.11 redis将当前数据库中的key转移到其他数据库中</a><br><a href="#1.12">&nbsp;&nbsp;1.12
+                    redis移除给定key的过期时间</a><br><a href="#1.16">&nbsp;&nbsp;1.16 redis实时传储收到的请求</a><br><a href="#1.17">&nbsp;&nbsp;1.17
+                    redis选择一个数据库</a><br><a href="#1.19">&nbsp;&nbsp;1.19 测试redis是否联通</a><br><a href="#1.20">&nbsp;&nbsp;1.20
+                    redis退出连接</a><br><a href="#1.21">&nbsp;&nbsp;1.21 redis返回当前数据库中key的数量</a><br><a href="#1.21">&nbsp;&nbsp;1.21
+                    获取redis服务器信息</a><br><a href="#1.22">&nbsp;&nbsp;1.22 redis删除当前选择的数据库中的key</a><br><a href="#1.23">&nbsp;&nbsp;1.23
+                    redis删除所有数据库中的所有key</a><br><a href="#1.24">&nbsp;&nbsp;1.24 redis设置密码</a></div>
             </div>
-            <p>通过<code>db.collection.find()</code>方法可以查询绑定或内嵌条件条件的文档.</p>
-            <p>插入数据:</p>
-            <pre class="prettyprint"><code>db.inventory.insertMany( [
-   { item: "journal", qty: 25, size: { h: 14, w: 21, uom: "cm" }, status: "A" },
-   { item: "notebook", qty: 50, size: { h: 8.5, w: 11, uom: "in" }, status: "A" },
-   { item: "paper", qty: 100, size: { h: 8.5, w: 11, uom: "in" }, status: "D" },
-   { item: "planner", qty: 75, size: { h: 22.85, w: 30, uom: "cm" }, status: "D" },
-   { item: "postcard", qty: 45, size: { h: 10, w: 15.25, uom: "cm" }, status: "A" }
-]);
+            <div id="1"><h3>1 redis常用命令</h3></div>
+            <div id="1.1" class="dsd_title_c_2"><h4>1.1 命令行连接Redis</h4></div>
+            <pre class="prettyprint"><code>redis-cli
 </code></pre>
-            <p>你可以在以下窗口输入命令测试:</p>
-            <iframe class="mws-root" allowfullscreen="" sandbox="allow-scripts allow-same-origin" width="600"
-                    height="280" src="https://mws.mongodb.com/?version=3.4"></iframe>
-            <div id="1"><h3>1 mongodb匹配一个绑定或嵌套的文档</h3></div>
-            <p>举个栗子.</p>
-            <p>查询<code>size</code>数组满足条件<code>{ h: 14, w: 21, uom: "cm" }</code>的数据.</p>
-            <pre class="prettyprint"><code>db.inventory.find( { size: { h: 14, w: 21, uom: "cm" } } )
+            <div id="1.2" class="dsd_title_c_2"><h4>1.2 redis查看所有的key</h4></div>
+            <pre><code>keys *
 </code></pre>
-            <div id="2"><h3>2 mongodb查询一个嵌套数据字段</h3></div>
-            <p>查询绑定或者嵌套的数据字段, 采用<code>.</code>字符("field.nestedField").</p>
-            <div id="2.1" class="dsd_title_c_2"><h4>2.1 通过字段值相等判断</h4></div>
-            <pre class="prettyprint"><code>db.inventory.find( { "size.uom": "in" } )
+            <div class="bs-callout bs-callout-warning">
+                <p>keys命令后边没有分号, 中间有空格</p>
+            </div>
+            <div id="1.3" class="dsd_title_c_2"><h4>1.3 redis查看key的类型</h4></div>
+            <pre class="prettyprint"><code>type BO:Server
 </code></pre>
-            <div id="2.2" class="dsd_title_c_2"><h4>2.2 通过操作符匹配</h4></div>
-            <pre class="prettyprint"><code>db.inventory.find( { "size.h": { $lt: 15 } } )
+            <div id="1.4" class="dsd_title_c_2"><h4>1.4 redis获取一个key</h4></div>
+            <pre class="prettyprint"><code>get key
 </code></pre>
-            <div id="2.3" class="dsd_title_c_2"><h4>2.3 mongodb多条件查询</h4></div>
-            <pre class="prettyprint"><code>db.inventory.find( { "size.h": { $lt: 15 }, "size.uom": "in", status: "D" } )
+            <div id="1.5" class="dsd_title_c_2"><h4>1.5 redis删除key</h4></div>
+            <p>删除单个key</p>
+            <pre class="prettyprint"><code>del key
 </code></pre>
-            <div id="3"><h3>3 参考文章</h3></div>
-            <p><a href="https://docs.mongodb.com/manual/tutorial/query-embedded-documents/">https://docs.mongodb.com/manual/tutorial/query-embedded-documents/</a>
-            </p>
-            <div id="4"><h3>4 相关文章</h3></div>
-            <p><a href="https://dashidan.com/article/mongodb/index.html">MongoDB中文文档</a></p>
+            <p>删除多个key</p>
+            <pre class="prettyprint"><code>redis-cli -a pass(密码) keys "WX_ACT_USER_KEY_*" | xargs redis-cli -a pass(密码) del
+</code></pre>
+            <div id="1.6" class="dsd_title_c_2"><h4>1.6 redis返回满足给定patterm的所有key</h4></div>
+            <pre class="prettyprint"><code>keys    #(*)取出所有的key
+        (my*)取出和关键字相关的
+</code></pre>
+            <div id="1.7" class="dsd_title_c_2"><h4>1.7 redis确认一个key是否存在</h4></div>
+            <pre class="prettyprint"><code>exists
+</code></pre>
+            <div id="1.8" class="dsd_title_c_2"><h4>1.8 redis设置一个key的过期时间</h4></div>
+            <pre class="prettyprint"><code>expire
+</code></pre>
+            <div id="1.9" class="dsd_title_c_2"><h4>1.9 redis获取hash类型的全部数据</h4></div>
+            <pre class="prettyprint"><code>hgetall key
+</code></pre>
+            <div id="1.10" class="dsd_title_c_2"><h4>1.10 redis获取hash类型的一个数据</h4></div>
+            <pre class="prettyprint"><code>hget key key1
+</code></pre>
+            <div id="1.11" class="dsd_title_c_2"><h4>1.11 redis将当前数据库中的key转移到其他数据库中</h4></div>
+            <pre class="prettyprint"><code>move            #0-15数据库
+</code></pre>
+            <div id="1.12" class="dsd_title_c_2"><h4>1.12 redis移除给定key的过期时间</h4></div>
+            <pre class="prettyprint"><code>persist                    #取消定时
+</code></pre>
+            <div id="1.16" class="dsd_title_c_2"><h4>1.16 redis实时传储收到的请求</h4></div>
+            <pre class="prettyprint"><code>config get dir/*
+</code></pre>
+            <div id="1.17" class="dsd_title_c_2"><h4>1.17 redis选择一个数据库</h4></div>
+            <pre class="prettyprint"><code>select 0
+</code></pre>
+            <p>0为数据库ID</p>
+            <div id="1.19" class="dsd_title_c_2"><h4>1.19 测试redis是否联通</h4></div>
+            <pre class="prettyprint"><code>ping
+</code></pre>
+            <div id="1.20" class="dsd_title_c_2"><h4>1.20 redis退出连接</h4></div>
+            <pre class="prettyprint"><code>quit
+</code></pre>
+            <div id="1.21" class="dsd_title_c_2"><h4>1.21 redis返回当前数据库中key的数量</h4></div>
+            <pre class="prettyprint"><code>dbsize
+</code></pre>
+            <div id="1.21" class="dsd_title_c_2"><h4>1.21 获取redis服务器信息</h4></div>
+            <pre class="prettyprint"><code>info
+</code></pre>
+            <div id="1.22" class="dsd_title_c_2"><h4>1.22 redis删除当前选择的数据库中的key</h4></div>
+            <pre class="prettyprint"><code>flushdb
+</code></pre>
+            <div id="1.23" class="dsd_title_c_2"><h4>1.23 redis删除所有数据库中的所有key</h4></div>
+            <pre class="prettyprint"><code>flushall
+</code></pre>
+            <div id="1.24" class="dsd_title_c_2"><h4>1.24 redis设置密码</h4></div>
+            <pre class="prettyprint"><code>vi /etc/redis.conf
+requirepass pp123456
+pkill redis     #杀死进程
+service  redis start 
+auth        pp123456
+</code></pre>
         </div>
     </div>
 </div>
 
 <footer class="text-center navbar-fixed-bottom navbar-default">
-    <div class="text-center">
-        <a class="navbar-brand"
-           href="https://amp.dashidan.com/article/mongodb/basic/14.html">下一篇: MongoDB查询返回指定字段</a>
-    </div>
     <div class="text-center">
         <a class="navbar-brand" href="https://amp.dashidan.com/index.html">目录</a>
     </div>

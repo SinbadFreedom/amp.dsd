@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/mongodb/basic/13.html">
-    <title>MongoDB查询绑定或嵌套的方法 - Mongodb中文手册 - 大屎蛋教程网</title>
-    <meta name="description" content="mongodb查询绑定或嵌套的方法.匹配一个绑定或嵌套的文档,mongodb查询一个嵌套数据字段,mongodb通过操作符匹配,mongodb多条件查询.">
+    <link rel="canonical" href="https://dashidan.com/article/redis/basic/1.html">
+    <title>Ubuntu安装配置Redis</title>
+    <meta name="description" content="ubuntu安装redis服务 ubuntu安装php对redis的支持 ubuntu启动和停止redis">
     <style amp-custom>
         html {
             -webkit-text-size-adjust: 100%;
@@ -2170,8 +2170,6 @@
       "datePublished": "2015-02-05T08:00:00+08:00"
     }
 
-
-
     </script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <style amp-boilerplate>body {
@@ -2247,53 +2245,32 @@
     <!-- 顶部面包屑导航-->
     <div class="text-left">
         <a href="https://amp.dashidan.com/index.html">首页</a> > <a
-            href="https://amp.dashidan.com/article/mongodb/index.html">mongodb</a> > MongoDB查询绑定或嵌套的方法
+            href="https://amp.dashidan.com/article/redis/index.html">redis</a> > Ubuntu安装配置Redis
     </div>
 
     <div class="dsd_content">
         <!-- 文章内容-->
-        <div class="dsd_title"><h1>MongoDB查询绑定或嵌套的方法</h1></div>
+        <div class="dsd_title"><h1>Ubuntu安装配置Redis</h1></div>
         <div id="xs_content_border">
             <div>
-                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 mongodb匹配一个绑定或嵌套的文档</a><br><a href="#2">2
-                    mongodb查询一个嵌套数据字段</a><br><a href="#2.1">&nbsp;&nbsp;2.1 通过字段值相等判断</a><br><a href="#2.2">&nbsp;&nbsp;2.2
-                    通过操作符匹配</a><br><a href="#2.3">&nbsp;&nbsp;2.3 mongodb多条件查询</a><br><a href="#3">3 参考文章</a><br><a
-                        href="#4">4 相关文章</a></div>
+                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 ubuntu安装redis服务</a><br><a href="#2">2
+                    ubuntu安装php对redis的支持</a><br><a href="#3">3 启动和停止</a></div>
             </div>
-            <p>通过<code>db.collection.find()</code>方法可以查询绑定或内嵌条件条件的文档.</p>
-            <p>插入数据:</p>
-            <pre class="prettyprint"><code>db.inventory.insertMany( [
-   { item: "journal", qty: 25, size: { h: 14, w: 21, uom: "cm" }, status: "A" },
-   { item: "notebook", qty: 50, size: { h: 8.5, w: 11, uom: "in" }, status: "A" },
-   { item: "paper", qty: 100, size: { h: 8.5, w: 11, uom: "in" }, status: "D" },
-   { item: "planner", qty: 75, size: { h: 22.85, w: 30, uom: "cm" }, status: "D" },
-   { item: "postcard", qty: 45, size: { h: 10, w: 15.25, uom: "cm" }, status: "A" }
-]);
+            <div id="1"><h3>1 ubuntu安装redis服务</h3></div>
+            <p>输入命令:</p>
+            <pre class="prettyprint"><code>apt-get install redis-server
 </code></pre>
-            <p>你可以在以下窗口输入命令测试:</p>
-            <iframe class="mws-root" allowfullscreen="" sandbox="allow-scripts allow-same-origin" width="600"
-                    height="280" src="https://mws.mongodb.com/?version=3.4"></iframe>
-            <div id="1"><h3>1 mongodb匹配一个绑定或嵌套的文档</h3></div>
-            <p>举个栗子.</p>
-            <p>查询<code>size</code>数组满足条件<code>{ h: 14, w: 21, uom: "cm" }</code>的数据.</p>
-            <pre class="prettyprint"><code>db.inventory.find( { size: { h: 14, w: 21, uom: "cm" } } )
+            <div id="2"><h3>2 ubuntu安装php对redis的支持</h3></div>
+            <p>执行以下脚本</p>
+            <pre class="prettyprint"><code>apt-get install php5-redis
 </code></pre>
-            <div id="2"><h3>2 mongodb查询一个嵌套数据字段</h3></div>
-            <p>查询绑定或者嵌套的数据字段, 采用<code>.</code>字符("field.nestedField").</p>
-            <div id="2.1" class="dsd_title_c_2"><h4>2.1 通过字段值相等判断</h4></div>
-            <pre class="prettyprint"><code>db.inventory.find( { "size.uom": "in" } )
+            <div class="bs-callout bs-callout-warning">
+                <p>这一步不是必须, 根据自己的需要安装.</p>
+            </div>
+            <div id="3"><h3>3 启动和停止</h3></div>
+            <pre class="prettyprint"><code>service redis start
+service redis stop
 </code></pre>
-            <div id="2.2" class="dsd_title_c_2"><h4>2.2 通过操作符匹配</h4></div>
-            <pre class="prettyprint"><code>db.inventory.find( { "size.h": { $lt: 15 } } )
-</code></pre>
-            <div id="2.3" class="dsd_title_c_2"><h4>2.3 mongodb多条件查询</h4></div>
-            <pre class="prettyprint"><code>db.inventory.find( { "size.h": { $lt: 15 }, "size.uom": "in", status: "D" } )
-</code></pre>
-            <div id="3"><h3>3 参考文章</h3></div>
-            <p><a href="https://docs.mongodb.com/manual/tutorial/query-embedded-documents/">https://docs.mongodb.com/manual/tutorial/query-embedded-documents/</a>
-            </p>
-            <div id="4"><h3>4 相关文章</h3></div>
-            <p><a href="https://dashidan.com/article/mongodb/index.html">MongoDB中文文档</a></p>
         </div>
     </div>
 </div>
@@ -2301,7 +2278,7 @@
 <footer class="text-center navbar-fixed-bottom navbar-default">
     <div class="text-center">
         <a class="navbar-brand"
-           href="https://amp.dashidan.com/article/mongodb/basic/14.html">下一篇: MongoDB查询返回指定字段</a>
+           href="https://amp.dashidan.com/article/redis/basic/2.html">下一篇: Redis常用命令</a>
     </div>
     <div class="text-center">
         <a class="navbar-brand" href="https://amp.dashidan.com/index.html">目录</a>
