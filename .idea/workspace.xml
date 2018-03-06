@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2962297-7d8d-4e5e-a770-4028feeaaf00" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/article/mongodb/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/article/nodejs/index.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/article/git/faq/1.html" afterPath="$PROJECT_DIR$/article/git/faq/1.html" />
       <change beforePath="$PROJECT_DIR$/article/git/faq/2.html" afterPath="$PROJECT_DIR$/article/git/faq/2.html" />
       <change beforePath="$PROJECT_DIR$/article/git/faq/3.html" afterPath="$PROJECT_DIR$/article/git/faq/3.html" />
       <change beforePath="$PROJECT_DIR$/article/git/faq/4.html" afterPath="$PROJECT_DIR$/article/git/faq/4.html" />
       <change beforePath="$PROJECT_DIR$/article/git/faq/5.html" afterPath="$PROJECT_DIR$/article/git/faq/5.html" />
       <change beforePath="$PROJECT_DIR$/article/git/faq/6.html" afterPath="$PROJECT_DIR$/article/git/faq/6.html" />
+      <change beforePath="$PROJECT_DIR$/article/git/index.html" afterPath="$PROJECT_DIR$/article/git/index.html" />
       <change beforePath="$PROJECT_DIR$/article/html/faq/1.html" afterPath="$PROJECT_DIR$/article/html/faq/1.html" />
       <change beforePath="$PROJECT_DIR$/article/html/faq/10.html" afterPath="$PROJECT_DIR$/article/html/faq/10.html" />
       <change beforePath="$PROJECT_DIR$/article/html/faq/11.html" afterPath="$PROJECT_DIR$/article/html/faq/11.html" />
@@ -29,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/article/html/faq/7.html" afterPath="$PROJECT_DIR$/article/html/faq/7.html" />
       <change beforePath="$PROJECT_DIR$/article/html/faq/8.html" afterPath="$PROJECT_DIR$/article/html/faq/8.html" />
       <change beforePath="$PROJECT_DIR$/article/html/faq/9.html" afterPath="$PROJECT_DIR$/article/html/faq/9.html" />
+      <change beforePath="$PROJECT_DIR$/article/html/index.html" afterPath="$PROJECT_DIR$/article/html/index.html" />
       <change beforePath="$PROJECT_DIR$/article/java/addenda/1.html" afterPath="$PROJECT_DIR$/article/java/addenda/1.html" />
       <change beforePath="$PROJECT_DIR$/article/java/addenda/2.html" afterPath="$PROJECT_DIR$/article/java/addenda/2.html" />
       <change beforePath="$PROJECT_DIR$/article/java/addenda/3.html" afterPath="$PROJECT_DIR$/article/java/addenda/3.html" />
@@ -58,6 +57,7 @@
       <change beforePath="$PROJECT_DIR$/article/java/basic/9.html" afterPath="$PROJECT_DIR$/article/java/basic/9.html" />
       <change beforePath="$PROJECT_DIR$/article/java/idea/1.html" afterPath="$PROJECT_DIR$/article/java/idea/1.html" />
       <change beforePath="$PROJECT_DIR$/article/java/idea/2.html" afterPath="$PROJECT_DIR$/article/java/idea/2.html" />
+      <change beforePath="$PROJECT_DIR$/article/java/index.html" afterPath="$PROJECT_DIR$/article/java/index.html" />
       <change beforePath="$PROJECT_DIR$/article/java/jdk8/1.html" afterPath="$PROJECT_DIR$/article/java/jdk8/1.html" />
       <change beforePath="$PROJECT_DIR$/article/java/jdk8/2.html" afterPath="$PROJECT_DIR$/article/java/jdk8/2.html" />
       <change beforePath="$PROJECT_DIR$/article/java/jdk8/3.html" afterPath="$PROJECT_DIR$/article/java/jdk8/3.html" />
@@ -77,6 +77,7 @@
       <change beforePath="$PROJECT_DIR$/article/linux/common/7.html" afterPath="$PROJECT_DIR$/article/linux/common/7.html" />
       <change beforePath="$PROJECT_DIR$/article/linux/common/8.html" afterPath="$PROJECT_DIR$/article/linux/common/8.html" />
       <change beforePath="$PROJECT_DIR$/article/linux/common/9.html" afterPath="$PROJECT_DIR$/article/linux/common/9.html" />
+      <change beforePath="$PROJECT_DIR$/article/linux/index.html" afterPath="$PROJECT_DIR$/article/linux/index.html" />
       <change beforePath="$PROJECT_DIR$/article/linux/tmux/1.html" afterPath="$PROJECT_DIR$/article/linux/tmux/1.html" />
       <change beforePath="$PROJECT_DIR$/article/linux/tmux/2.html" afterPath="$PROJECT_DIR$/article/linux/tmux/2.html" />
       <change beforePath="$PROJECT_DIR$/article/linux/tmux/3.html" afterPath="$PROJECT_DIR$/article/linux/tmux/3.html" />
@@ -103,6 +104,7 @@
       <change beforePath="$PROJECT_DIR$/article/mongodb/basic/7.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/7.html" />
       <change beforePath="$PROJECT_DIR$/article/mongodb/basic/8.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/8.html" />
       <change beforePath="$PROJECT_DIR$/article/mongodb/basic/9.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/9.html" />
+      <change beforePath="$PROJECT_DIR$/article/mongodb/index.html" afterPath="$PROJECT_DIR$/article/mongodb/index.html" />
       <change beforePath="$PROJECT_DIR$/article/nodejs/faq/1.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/1.html" />
       <change beforePath="$PROJECT_DIR$/article/nodejs/faq/2.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/2.html" />
       <change beforePath="$PROJECT_DIR$/article/nodejs/faq/3.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/3.html" />
@@ -111,11 +113,15 @@
       <change beforePath="$PROJECT_DIR$/article/nodejs/faq/6.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/6.html" />
       <change beforePath="$PROJECT_DIR$/article/nodejs/faq/7.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/7.html" />
       <change beforePath="$PROJECT_DIR$/article/nodejs/faq/8.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/8.html" />
+      <change beforePath="$PROJECT_DIR$/article/nodejs/index.html" afterPath="$PROJECT_DIR$/article/nodejs/index.html" />
       <change beforePath="$PROJECT_DIR$/article/php/faq/1.html" afterPath="$PROJECT_DIR$/article/php/faq/1.html" />
       <change beforePath="$PROJECT_DIR$/article/php/faq/2.html" afterPath="$PROJECT_DIR$/article/php/faq/2.html" />
       <change beforePath="$PROJECT_DIR$/article/php/faq/3.html" afterPath="$PROJECT_DIR$/article/php/faq/3.html" />
+      <change beforePath="$PROJECT_DIR$/article/php/index.html" afterPath="$PROJECT_DIR$/article/php/index.html" />
       <change beforePath="$PROJECT_DIR$/article/redis/basic/1.html" afterPath="$PROJECT_DIR$/article/redis/basic/1.html" />
       <change beforePath="$PROJECT_DIR$/article/redis/basic/2.html" afterPath="$PROJECT_DIR$/article/redis/basic/2.html" />
+      <change beforePath="$PROJECT_DIR$/article/redis/index.html" afterPath="$PROJECT_DIR$/article/redis/index.html" />
+      <change beforePath="$PROJECT_DIR$/article/webserver/index.html" afterPath="$PROJECT_DIR$/article/webserver/index.html" />
       <change beforePath="$PROJECT_DIR$/article/webserver/nginx/1.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/1.html" />
       <change beforePath="$PROJECT_DIR$/article/webserver/nginx/2.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/2.html" />
       <change beforePath="$PROJECT_DIR$/article/webserver/nginx/3.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/3.html" />
@@ -129,7 +135,7 @@
       <change beforePath="$PROJECT_DIR$/article/windows/faq/6.html" afterPath="$PROJECT_DIR$/article/windows/faq/6.html" />
       <change beforePath="$PROJECT_DIR$/article/windows/faq/7.html" afterPath="$PROJECT_DIR$/article/windows/faq/7.html" />
       <change beforePath="$PROJECT_DIR$/article/windows/faq/8.html" afterPath="$PROJECT_DIR$/article/windows/faq/8.html" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/article/windows/index.html" afterPath="$PROJECT_DIR$/article/windows/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -169,8 +175,8 @@
                 <element signature="e#53146#53289#0" expanded="false" />
                 <element signature="e#53295#53435#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323529292" expanded="true" signature="53790:53956" ph="..." />
-                <marker date="1520323529292" expanded="true" signature="53883:53911" ph="..." />
+                <marker date="1520323750517" expanded="true" signature="53790:53956" ph="..." />
+                <marker date="1520323750517" expanded="true" signature="53883:53911" ph="..." />
               </folding>
             </state>
           </provider>
@@ -191,8 +197,8 @@
                 <element signature="e#53147#53290#0" expanded="false" />
                 <element signature="e#53296#53436#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323530837" expanded="true" signature="53791:53957" ph="..." />
-                <marker date="1520323530837" expanded="true" signature="53884:53912" ph="..." />
+                <marker date="1520323752340" expanded="true" signature="53791:53957" ph="..." />
+                <marker date="1520323752340" expanded="true" signature="53884:53912" ph="..." />
               </folding>
             </state>
           </provider>
@@ -213,8 +219,8 @@
                 <element signature="e#53128#53271#0" expanded="false" />
                 <element signature="e#53277#53417#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323531124" expanded="true" signature="53772:53938" ph="..." />
-                <marker date="1520323531124" expanded="true" signature="53865:53893" ph="..." />
+                <marker date="1520323752512" expanded="true" signature="53772:53938" ph="..." />
+                <marker date="1520323752512" expanded="true" signature="53865:53893" ph="..." />
               </folding>
             </state>
           </provider>
@@ -235,8 +241,8 @@
                 <element signature="e#53113#53256#0" expanded="false" />
                 <element signature="e#53262#53402#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323531303" expanded="true" signature="53756:53922" ph="..." />
-                <marker date="1520323531303" expanded="true" signature="53849:53877" ph="..." />
+                <marker date="1520323752670" expanded="true" signature="53756:53922" ph="..." />
+                <marker date="1520323752670" expanded="true" signature="53849:53877" ph="..." />
               </folding>
             </state>
           </provider>
@@ -257,8 +263,8 @@
                 <element signature="e#53125#53268#0" expanded="false" />
                 <element signature="e#53274#53414#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323531597" expanded="true" signature="53769:53935" ph="..." />
-                <marker date="1520323531597" expanded="true" signature="53862:53890" ph="..." />
+                <marker date="1520323753110" expanded="true" signature="53769:53935" ph="..." />
+                <marker date="1520323753110" expanded="true" signature="53862:53890" ph="..." />
               </folding>
             </state>
           </provider>
@@ -299,8 +305,8 @@
                 <element signature="e#53109#53252#0" expanded="false" />
                 <element signature="e#53258#53398#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323530162" expanded="true" signature="53753:53919" ph="..." />
-                <marker date="1520323530162" expanded="true" signature="53846:53874" ph="..." />
+                <marker date="1520323752055" expanded="true" signature="53753:53919" ph="..." />
+                <marker date="1520323752055" expanded="true" signature="53846:53874" ph="..." />
               </folding>
             </state>
           </provider>
@@ -321,8 +327,8 @@
                 <element signature="e#53122#53265#0" expanded="false" />
                 <element signature="e#53271#53411#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323530004" expanded="true" signature="53766:53932" ph="..." />
-                <marker date="1520323530004" expanded="true" signature="53859:53887" ph="..." />
+                <marker date="1520323751955" expanded="true" signature="53766:53932" ph="..." />
+                <marker date="1520323751955" expanded="true" signature="53859:53887" ph="..." />
               </folding>
             </state>
           </provider>
@@ -364,6 +370,7 @@
       <find>http://amp.localhost</find>
       <find>localhost</find>
       <find>https://dashidan.com/</find>
+      <find>p.dashidan.comarticle/</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -371,6 +378,7 @@
       <replace>https://dashidan.com/</replace>
       <replace>dashidan.com</replace>
       <replace>https://amp.dashidan.com</replace>
+      <replace>p.dashidan.com/article/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\workplace\git\amp.dsd\article</dir>
@@ -491,12 +499,12 @@
       <workItem from="1520317448699" duration="893000" />
       <workItem from="1520319256126" duration="1074000" />
       <workItem from="1520321413678" duration="1764000" />
-      <workItem from="1520323220725" duration="319000" />
+      <workItem from="1520323220725" duration="524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10387000" />
+    <option name="totallyTimeSpent" value="10592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,8 +878,8 @@
             <element signature="e#53146#53289#0" expanded="false" />
             <element signature="e#53295#53435#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323529292" expanded="true" signature="53790:53956" ph="..." />
-            <marker date="1520323529292" expanded="true" signature="53883:53911" ph="..." />
+            <marker date="1520323750517" expanded="true" signature="53790:53956" ph="..." />
+            <marker date="1520323750517" expanded="true" signature="53883:53911" ph="..." />
           </folding>
         </state>
       </provider>
@@ -890,8 +898,8 @@
             <element signature="e#53147#53290#0" expanded="false" />
             <element signature="e#53296#53436#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323530837" expanded="true" signature="53791:53957" ph="..." />
-            <marker date="1520323530837" expanded="true" signature="53884:53912" ph="..." />
+            <marker date="1520323752340" expanded="true" signature="53791:53957" ph="..." />
+            <marker date="1520323752340" expanded="true" signature="53884:53912" ph="..." />
           </folding>
         </state>
       </provider>
@@ -910,8 +918,8 @@
             <element signature="e#53128#53271#0" expanded="false" />
             <element signature="e#53277#53417#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323531124" expanded="true" signature="53772:53938" ph="..." />
-            <marker date="1520323531124" expanded="true" signature="53865:53893" ph="..." />
+            <marker date="1520323752512" expanded="true" signature="53772:53938" ph="..." />
+            <marker date="1520323752512" expanded="true" signature="53865:53893" ph="..." />
           </folding>
         </state>
       </provider>
@@ -930,8 +938,8 @@
             <element signature="e#53113#53256#0" expanded="false" />
             <element signature="e#53262#53402#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323531303" expanded="true" signature="53756:53922" ph="..." />
-            <marker date="1520323531303" expanded="true" signature="53849:53877" ph="..." />
+            <marker date="1520323752670" expanded="true" signature="53756:53922" ph="..." />
+            <marker date="1520323752670" expanded="true" signature="53849:53877" ph="..." />
           </folding>
         </state>
       </provider>
@@ -950,8 +958,8 @@
             <element signature="e#53125#53268#0" expanded="false" />
             <element signature="e#53274#53414#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323531597" expanded="true" signature="53769:53935" ph="..." />
-            <marker date="1520323531597" expanded="true" signature="53862:53890" ph="..." />
+            <marker date="1520323753110" expanded="true" signature="53769:53935" ph="..." />
+            <marker date="1520323753110" expanded="true" signature="53862:53890" ph="..." />
           </folding>
         </state>
       </provider>
@@ -988,8 +996,8 @@
             <element signature="e#53109#53252#0" expanded="false" />
             <element signature="e#53258#53398#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323530162" expanded="true" signature="53753:53919" ph="..." />
-            <marker date="1520323530162" expanded="true" signature="53846:53874" ph="..." />
+            <marker date="1520323752055" expanded="true" signature="53753:53919" ph="..." />
+            <marker date="1520323752055" expanded="true" signature="53846:53874" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1016,8 +1024,8 @@
             <element signature="e#53122#53265#0" expanded="false" />
             <element signature="e#53271#53411#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323530004" expanded="true" signature="53766:53932" ph="..." />
-            <marker date="1520323530004" expanded="true" signature="53859:53887" ph="..." />
+            <marker date="1520323751955" expanded="true" signature="53766:53932" ph="..." />
+            <marker date="1520323751955" expanded="true" signature="53859:53887" ph="..." />
           </folding>
         </state>
       </provider>
