@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/article/redis/index.html" afterPath="$PROJECT_DIR$/article/redis/index.html" />
       <change beforePath="$PROJECT_DIR$/article/webserver/index.html" afterPath="$PROJECT_DIR$/article/webserver/index.html" />
       <change beforePath="$PROJECT_DIR$/article/windows/index.html" afterPath="$PROJECT_DIR$/article/windows/index.html" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -113,8 +114,8 @@
                 <element signature="e#53114#53257#0" expanded="false" />
                 <element signature="e#53263#53403#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520324220233" expanded="true" signature="53757:53923" ph="..." />
-                <marker date="1520324220233" expanded="true" signature="53850:53878" ph="..." />
+                <marker date="1520324352979" expanded="true" signature="53757:53923" ph="..." />
+                <marker date="1520324352979" expanded="true" signature="53850:53878" ph="..." />
               </folding>
             </state>
           </provider>
@@ -183,8 +184,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/article/git/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="2241" column="0" lean-forward="true" selection-start-line="2241" selection-start-column="0" selection-end-line="2241" selection-end-column="0" />
+            <state relative-caret-position="247">
+              <caret line="2245" column="10" lean-forward="true" selection-start-line="2245" selection-start-column="10" selection-end-line="2245" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -247,6 +248,7 @@
       <find>localhost</find>
       <find>https://dashidan.com/</find>
       <find>p.dashidan.comarticle/</find>
+      <find>p.dashidan.comind</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -255,6 +257,7 @@
       <replace>dashidan.com</replace>
       <replace>https://amp.dashidan.com</replace>
       <replace>p.dashidan.com/article/</replace>
+      <replace>p.dashidan.com/ind</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\workplace\git\amp.dsd\article</dir>
@@ -273,7 +276,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/article/redis/basic/1.html" />
         <option value="$PROJECT_DIR$/article/linux/index.html" />
-        <option value="$PROJECT_DIR$/article/git/index.html" />
         <option value="$PROJECT_DIR$/article/java/index.html" />
         <option value="$PROJECT_DIR$/article/mongodb/index.html" />
         <option value="$PROJECT_DIR$/article/nodejs/index.html" />
@@ -282,6 +284,7 @@
         <option value="$PROJECT_DIR$/article/webserver/index.html" />
         <option value="$PROJECT_DIR$/article/windows/index.html" />
         <option value="$PROJECT_DIR$/article/html/index.html" />
+        <option value="$PROJECT_DIR$/article/git/index.html" />
       </list>
     </option>
   </component>
@@ -375,12 +378,12 @@
       <workItem from="1520317448699" duration="893000" />
       <workItem from="1520319256126" duration="1074000" />
       <workItem from="1520321413678" duration="1764000" />
-      <workItem from="1520323220725" duration="1039000" />
+      <workItem from="1520323220725" duration="1119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11107000" />
+    <option name="totallyTimeSpent" value="11187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,8 +794,8 @@
             <element signature="e#53114#53257#0" expanded="false" />
             <element signature="e#53263#53403#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520324220233" expanded="true" signature="53757:53923" ph="..." />
-            <marker date="1520324220233" expanded="true" signature="53850:53878" ph="..." />
+            <marker date="1520324352979" expanded="true" signature="53757:53923" ph="..." />
+            <marker date="1520324352979" expanded="true" signature="53850:53878" ph="..." />
           </folding>
         </state>
       </provider>
@@ -881,8 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/article/git/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="2241" column="0" lean-forward="true" selection-start-line="2241" selection-start-column="0" selection-end-line="2241" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="2245" column="10" lean-forward="true" selection-start-line="2245" selection-start-column="10" selection-end-line="2245" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
