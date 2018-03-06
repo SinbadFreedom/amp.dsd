@@ -2,139 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2962297-7d8d-4e5e-a770-4028feeaaf00" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/article/git/faq/1.html" afterPath="$PROJECT_DIR$/article/git/faq/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/git/faq/2.html" afterPath="$PROJECT_DIR$/article/git/faq/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/git/faq/3.html" afterPath="$PROJECT_DIR$/article/git/faq/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/git/faq/4.html" afterPath="$PROJECT_DIR$/article/git/faq/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/git/faq/5.html" afterPath="$PROJECT_DIR$/article/git/faq/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/git/faq/6.html" afterPath="$PROJECT_DIR$/article/git/faq/6.html" />
       <change beforePath="$PROJECT_DIR$/article/git/index.html" afterPath="$PROJECT_DIR$/article/git/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/1.html" afterPath="$PROJECT_DIR$/article/html/faq/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/10.html" afterPath="$PROJECT_DIR$/article/html/faq/10.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/11.html" afterPath="$PROJECT_DIR$/article/html/faq/11.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/12.html" afterPath="$PROJECT_DIR$/article/html/faq/12.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/13.html" afterPath="$PROJECT_DIR$/article/html/faq/13.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/14.html" afterPath="$PROJECT_DIR$/article/html/faq/14.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/15.html" afterPath="$PROJECT_DIR$/article/html/faq/15.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/16.html" afterPath="$PROJECT_DIR$/article/html/faq/16.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/17.html" afterPath="$PROJECT_DIR$/article/html/faq/17.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/18.html" afterPath="$PROJECT_DIR$/article/html/faq/18.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/2.html" afterPath="$PROJECT_DIR$/article/html/faq/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/3.html" afterPath="$PROJECT_DIR$/article/html/faq/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/4.html" afterPath="$PROJECT_DIR$/article/html/faq/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/5.html" afterPath="$PROJECT_DIR$/article/html/faq/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/6.html" afterPath="$PROJECT_DIR$/article/html/faq/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/7.html" afterPath="$PROJECT_DIR$/article/html/faq/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/8.html" afterPath="$PROJECT_DIR$/article/html/faq/8.html" />
-      <change beforePath="$PROJECT_DIR$/article/html/faq/9.html" afterPath="$PROJECT_DIR$/article/html/faq/9.html" />
       <change beforePath="$PROJECT_DIR$/article/html/index.html" afterPath="$PROJECT_DIR$/article/html/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/addenda/1.html" afterPath="$PROJECT_DIR$/article/java/addenda/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/addenda/2.html" afterPath="$PROJECT_DIR$/article/java/addenda/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/addenda/3.html" afterPath="$PROJECT_DIR$/article/java/addenda/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/addenda/4.html" afterPath="$PROJECT_DIR$/article/java/addenda/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/addenda/5.html" afterPath="$PROJECT_DIR$/article/java/addenda/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/1.html" afterPath="$PROJECT_DIR$/article/java/basic/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/10.html" afterPath="$PROJECT_DIR$/article/java/basic/10.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/11.html" afterPath="$PROJECT_DIR$/article/java/basic/11.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/12.html" afterPath="$PROJECT_DIR$/article/java/basic/12.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/13.html" afterPath="$PROJECT_DIR$/article/java/basic/13.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/14.html" afterPath="$PROJECT_DIR$/article/java/basic/14.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/15.html" afterPath="$PROJECT_DIR$/article/java/basic/15.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/16.html" afterPath="$PROJECT_DIR$/article/java/basic/16.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/17.html" afterPath="$PROJECT_DIR$/article/java/basic/17.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/18.html" afterPath="$PROJECT_DIR$/article/java/basic/18.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/19.html" afterPath="$PROJECT_DIR$/article/java/basic/19.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/2.html" afterPath="$PROJECT_DIR$/article/java/basic/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/20.html" afterPath="$PROJECT_DIR$/article/java/basic/20.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/21.html" afterPath="$PROJECT_DIR$/article/java/basic/21.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/22.html" afterPath="$PROJECT_DIR$/article/java/basic/22.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/3.html" afterPath="$PROJECT_DIR$/article/java/basic/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/4.html" afterPath="$PROJECT_DIR$/article/java/basic/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/5.html" afterPath="$PROJECT_DIR$/article/java/basic/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/6.html" afterPath="$PROJECT_DIR$/article/java/basic/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/7.html" afterPath="$PROJECT_DIR$/article/java/basic/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/8.html" afterPath="$PROJECT_DIR$/article/java/basic/8.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/basic/9.html" afterPath="$PROJECT_DIR$/article/java/basic/9.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/idea/1.html" afterPath="$PROJECT_DIR$/article/java/idea/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/idea/2.html" afterPath="$PROJECT_DIR$/article/java/idea/2.html" />
       <change beforePath="$PROJECT_DIR$/article/java/index.html" afterPath="$PROJECT_DIR$/article/java/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/1.html" afterPath="$PROJECT_DIR$/article/java/jdk8/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/2.html" afterPath="$PROJECT_DIR$/article/java/jdk8/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/3.html" afterPath="$PROJECT_DIR$/article/java/jdk8/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/4.html" afterPath="$PROJECT_DIR$/article/java/jdk8/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/5.html" afterPath="$PROJECT_DIR$/article/java/jdk8/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/6.html" afterPath="$PROJECT_DIR$/article/java/jdk8/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/java/jdk8/7.html" afterPath="$PROJECT_DIR$/article/java/jdk8/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/1.html" afterPath="$PROJECT_DIR$/article/linux/common/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/10.html" afterPath="$PROJECT_DIR$/article/linux/common/10.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/11.html" afterPath="$PROJECT_DIR$/article/linux/common/11.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/12.html" afterPath="$PROJECT_DIR$/article/linux/common/12.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/2.html" afterPath="$PROJECT_DIR$/article/linux/common/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/3.html" afterPath="$PROJECT_DIR$/article/linux/common/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/4.html" afterPath="$PROJECT_DIR$/article/linux/common/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/5.html" afterPath="$PROJECT_DIR$/article/linux/common/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/6.html" afterPath="$PROJECT_DIR$/article/linux/common/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/7.html" afterPath="$PROJECT_DIR$/article/linux/common/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/8.html" afterPath="$PROJECT_DIR$/article/linux/common/8.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/common/9.html" afterPath="$PROJECT_DIR$/article/linux/common/9.html" />
       <change beforePath="$PROJECT_DIR$/article/linux/index.html" afterPath="$PROJECT_DIR$/article/linux/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/tmux/1.html" afterPath="$PROJECT_DIR$/article/linux/tmux/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/tmux/2.html" afterPath="$PROJECT_DIR$/article/linux/tmux/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/linux/tmux/3.html" afterPath="$PROJECT_DIR$/article/linux/tmux/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/addenda/1.html" afterPath="$PROJECT_DIR$/article/mongodb/addenda/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/addenda/2.html" afterPath="$PROJECT_DIR$/article/mongodb/addenda/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/addenda/3.html" afterPath="$PROJECT_DIR$/article/mongodb/addenda/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/1.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/10.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/10.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/11.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/11.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/12.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/12.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/13.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/13.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/14.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/14.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/15.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/15.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/16.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/16.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/17.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/17.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/18.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/18.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/19.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/19.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/2.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/20.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/20.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/3.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/4.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/5.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/6.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/7.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/8.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/8.html" />
-      <change beforePath="$PROJECT_DIR$/article/mongodb/basic/9.html" afterPath="$PROJECT_DIR$/article/mongodb/basic/9.html" />
       <change beforePath="$PROJECT_DIR$/article/mongodb/index.html" afterPath="$PROJECT_DIR$/article/mongodb/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/1.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/2.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/3.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/4.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/5.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/6.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/7.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/nodejs/faq/8.html" afterPath="$PROJECT_DIR$/article/nodejs/faq/8.html" />
       <change beforePath="$PROJECT_DIR$/article/nodejs/index.html" afterPath="$PROJECT_DIR$/article/nodejs/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/php/faq/1.html" afterPath="$PROJECT_DIR$/article/php/faq/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/php/faq/2.html" afterPath="$PROJECT_DIR$/article/php/faq/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/php/faq/3.html" afterPath="$PROJECT_DIR$/article/php/faq/3.html" />
       <change beforePath="$PROJECT_DIR$/article/php/index.html" afterPath="$PROJECT_DIR$/article/php/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/redis/basic/1.html" afterPath="$PROJECT_DIR$/article/redis/basic/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/redis/basic/2.html" afterPath="$PROJECT_DIR$/article/redis/basic/2.html" />
       <change beforePath="$PROJECT_DIR$/article/redis/index.html" afterPath="$PROJECT_DIR$/article/redis/index.html" />
       <change beforePath="$PROJECT_DIR$/article/webserver/index.html" afterPath="$PROJECT_DIR$/article/webserver/index.html" />
-      <change beforePath="$PROJECT_DIR$/article/webserver/nginx/1.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/webserver/nginx/2.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/webserver/nginx/3.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/webserver/nginx/4.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/webserver/nginx/5.html" afterPath="$PROJECT_DIR$/article/webserver/nginx/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/1.html" afterPath="$PROJECT_DIR$/article/windows/faq/1.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/2.html" afterPath="$PROJECT_DIR$/article/windows/faq/2.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/3.html" afterPath="$PROJECT_DIR$/article/windows/faq/3.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/4.html" afterPath="$PROJECT_DIR$/article/windows/faq/4.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/5.html" afterPath="$PROJECT_DIR$/article/windows/faq/5.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/6.html" afterPath="$PROJECT_DIR$/article/windows/faq/6.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/7.html" afterPath="$PROJECT_DIR$/article/windows/faq/7.html" />
-      <change beforePath="$PROJECT_DIR$/article/windows/faq/8.html" afterPath="$PROJECT_DIR$/article/windows/faq/8.html" />
       <change beforePath="$PROJECT_DIR$/article/windows/index.html" afterPath="$PROJECT_DIR$/article/windows/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -153,9 +29,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/java/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="494">
+              <caret line="2247" column="13" lean-forward="true" selection-start-line="2247" selection-start-column="13" selection-end-line="2247" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,8 +41,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/linux/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="114">
+              <caret line="2240" column="0" lean-forward="true" selection-start-line="2240" selection-start-column="0" selection-end-line="2240" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -175,8 +53,6 @@
                 <element signature="e#53146#53289#0" expanded="false" />
                 <element signature="e#53295#53435#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323750517" expanded="true" signature="53790:53956" ph="..." />
-                <marker date="1520323750517" expanded="true" signature="53883:53911" ph="..." />
               </folding>
             </state>
           </provider>
@@ -185,20 +61,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/mongodb/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="2244" column="10" lean-forward="false" selection-start-line="2244" selection-start-column="10" selection-end-line="2244" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#52403#52686#0" expanded="false" />
-                <element signature="e#52692#52840#0" expanded="false" />
-                <element signature="e#52846#52991#0" expanded="false" />
-                <element signature="e#52997#53141#0" expanded="false" />
-                <element signature="e#53147#53290#0" expanded="false" />
-                <element signature="e#53296#53436#0" expanded="false" />
+                <element signature="e#52404#52687#0" expanded="false" />
+                <element signature="e#52693#52841#0" expanded="false" />
+                <element signature="e#52847#52992#0" expanded="false" />
+                <element signature="e#52998#53142#0" expanded="false" />
+                <element signature="e#53148#53291#0" expanded="false" />
+                <element signature="e#53297#53437#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323752340" expanded="true" signature="53791:53957" ph="..." />
-                <marker date="1520323752340" expanded="true" signature="53884:53912" ph="..." />
               </folding>
             </state>
           </provider>
@@ -207,20 +81,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/nodejs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="380">
+              <caret line="2246" column="6" lean-forward="false" selection-start-line="2246" selection-start-column="6" selection-end-line="2246" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#52384#52667#0" expanded="false" />
-                <element signature="e#52673#52821#0" expanded="false" />
-                <element signature="e#52827#52972#0" expanded="false" />
-                <element signature="e#52978#53122#0" expanded="false" />
-                <element signature="e#53128#53271#0" expanded="false" />
-                <element signature="e#53277#53417#0" expanded="false" />
+                <element signature="e#52385#52668#0" expanded="false" />
+                <element signature="e#52674#52822#0" expanded="false" />
+                <element signature="e#52828#52973#0" expanded="false" />
+                <element signature="e#52979#53123#0" expanded="false" />
+                <element signature="e#53129#53272#0" expanded="false" />
+                <element signature="e#53278#53418#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323752512" expanded="true" signature="53772:53938" ph="..." />
-                <marker date="1520323752512" expanded="true" signature="53865:53893" ph="..." />
               </folding>
             </state>
           </provider>
@@ -229,20 +101,20 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/php/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="2253" column="13" lean-forward="true" selection-start-line="2253" selection-start-column="13" selection-end-line="2253" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#52369#52652#0" expanded="false" />
-                <element signature="e#52658#52806#0" expanded="false" />
-                <element signature="e#52812#52957#0" expanded="false" />
-                <element signature="e#52963#53107#0" expanded="false" />
-                <element signature="e#53113#53256#0" expanded="false" />
-                <element signature="e#53262#53402#0" expanded="false" />
+                <element signature="e#52370#52653#0" expanded="false" />
+                <element signature="e#52659#52807#0" expanded="false" />
+                <element signature="e#52813#52958#0" expanded="false" />
+                <element signature="e#52964#53108#0" expanded="false" />
+                <element signature="e#53114#53257#0" expanded="false" />
+                <element signature="e#53263#53403#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323752670" expanded="true" signature="53756:53922" ph="..." />
-                <marker date="1520323752670" expanded="true" signature="53849:53877" ph="..." />
+                <marker date="1520324220233" expanded="true" signature="53757:53923" ph="..." />
+                <marker date="1520324220233" expanded="true" signature="53850:53878" ph="..." />
               </folding>
             </state>
           </provider>
@@ -251,20 +123,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/redis/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="361">
+              <caret line="2245" column="6" lean-forward="false" selection-start-line="2245" selection-start-column="6" selection-end-line="2245" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#52381#52664#0" expanded="false" />
-                <element signature="e#52670#52818#0" expanded="false" />
-                <element signature="e#52824#52969#0" expanded="false" />
-                <element signature="e#52975#53119#0" expanded="false" />
-                <element signature="e#53125#53268#0" expanded="false" />
-                <element signature="e#53274#53414#0" expanded="false" />
+                <element signature="e#52382#52665#0" expanded="false" />
+                <element signature="e#52671#52819#0" expanded="false" />
+                <element signature="e#52825#52970#0" expanded="false" />
+                <element signature="e#52976#53120#0" expanded="false" />
+                <element signature="e#53126#53269#0" expanded="false" />
+                <element signature="e#53275#53415#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323753110" expanded="true" signature="53769:53935" ph="..." />
-                <marker date="1520323753110" expanded="true" signature="53862:53890" ph="..." />
               </folding>
             </state>
           </provider>
@@ -273,8 +143,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/webserver/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="247">
+              <caret line="2238" column="0" lean-forward="false" selection-start-line="2238" selection-start-column="0" selection-end-line="2238" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -293,20 +163,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/windows/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="79" />
+            <state relative-caret-position="418">
+              <caret line="2245" column="6" lean-forward="false" selection-start-line="2245" selection-start-column="6" selection-end-line="2245" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#52365#52648#0" expanded="false" />
-                <element signature="e#52654#52802#0" expanded="false" />
-                <element signature="e#52808#52953#0" expanded="false" />
-                <element signature="e#52959#53103#0" expanded="false" />
-                <element signature="e#53109#53252#0" expanded="false" />
-                <element signature="e#53258#53398#0" expanded="false" />
+                <element signature="e#52366#52649#0" expanded="false" />
+                <element signature="e#52655#52803#0" expanded="false" />
+                <element signature="e#52809#52954#0" expanded="false" />
+                <element signature="e#52960#53104#0" expanded="false" />
+                <element signature="e#53110#53253#0" expanded="false" />
+                <element signature="e#53259#53399#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323752055" expanded="true" signature="53753:53919" ph="..." />
-                <marker date="1520323752055" expanded="true" signature="53846:53874" ph="..." />
               </folding>
             </state>
           </provider>
@@ -315,31 +183,39 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/article/git/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="2160" column="12" lean-forward="false" selection-start-line="2160" selection-start-column="12" selection-end-line="2160" selection-end-column="12" />
+            <state relative-caret-position="171">
+              <caret line="2241" column="0" lean-forward="true" selection-start-line="2241" selection-start-column="0" selection-end-line="2241" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#52378#52661#0" expanded="false" />
-                <element signature="e#52667#52815#0" expanded="false" />
-                <element signature="e#52821#52966#0" expanded="false" />
-                <element signature="e#52972#53116#0" expanded="false" />
-                <element signature="e#53122#53265#0" expanded="false" />
-                <element signature="e#53271#53411#0" expanded="false" />
+                <element signature="e#52379#52662#0" expanded="false" />
+                <element signature="e#52668#52816#0" expanded="false" />
+                <element signature="e#52822#52967#0" expanded="false" />
+                <element signature="e#52973#53117#0" expanded="false" />
+                <element signature="e#53123#53266#0" expanded="false" />
+                <element signature="e#53272#53412#0" expanded="false" />
                 <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <marker date="1520323751955" expanded="true" signature="53766:53932" ph="..." />
-                <marker date="1520323751955" expanded="true" signature="53859:53887" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/article/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="2226" column="13" lean-forward="false" selection-start-line="2226" selection-start-column="13" selection-end-line="2226" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="608">
+              <caret line="2246" column="0" lean-forward="true" selection-start-line="2246" selection-start-column="0" selection-end-line="2246" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#52388#52671#0" expanded="false" />
+                <element signature="e#52677#52825#0" expanded="false" />
+                <element signature="e#52831#52976#0" expanded="false" />
+                <element signature="e#52982#53126#0" expanded="false" />
+                <element signature="e#53132#53275#0" expanded="false" />
+                <element signature="e#53281#53421#0" expanded="false" />
+                <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -396,16 +272,16 @@
         <option value="$PROJECT_DIR$/article/html/faq/1.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/article/redis/basic/1.html" />
-        <option value="$PROJECT_DIR$/article/html/index.html" />
-        <option value="$PROJECT_DIR$/article/java/index.html" />
         <option value="$PROJECT_DIR$/article/linux/index.html" />
+        <option value="$PROJECT_DIR$/article/git/index.html" />
+        <option value="$PROJECT_DIR$/article/java/index.html" />
         <option value="$PROJECT_DIR$/article/mongodb/index.html" />
         <option value="$PROJECT_DIR$/article/nodejs/index.html" />
         <option value="$PROJECT_DIR$/article/php/index.html" />
         <option value="$PROJECT_DIR$/article/redis/index.html" />
         <option value="$PROJECT_DIR$/article/webserver/index.html" />
         <option value="$PROJECT_DIR$/article/windows/index.html" />
-        <option value="$PROJECT_DIR$/article/git/index.html" />
+        <option value="$PROJECT_DIR$/article/html/index.html" />
       </list>
     </option>
   </component>
@@ -499,12 +375,12 @@
       <workItem from="1520317448699" duration="893000" />
       <workItem from="1520319256126" duration="1074000" />
       <workItem from="1520321413678" duration="1764000" />
-      <workItem from="1520323220725" duration="524000" />
+      <workItem from="1520323220725" duration="1039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10592000" />
+    <option name="totallyTimeSpent" value="11107000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/java/basic/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42427">
-          <caret line="2305" column="14" lean-forward="false" selection-start-line="2305" selection-start-column="14" selection-end-line="2305" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/article/java/basic/2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45011">
@@ -838,36 +707,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/html/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52387#52670#0" expanded="false" />
-            <element signature="e#52676#52824#0" expanded="false" />
-            <element signature="e#52830#52975#0" expanded="false" />
-            <element signature="e#52981#53125#0" expanded="false" />
-            <element signature="e#53131#53274#0" expanded="false" />
-            <element signature="e#53280#53420#0" expanded="false" />
-            <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="760">
+          <caret line="2226" column="13" lean-forward="false" selection-start-line="2226" selection-start-column="13" selection-end-line="2226" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/java/index.html">
+    <entry file="file://$PROJECT_DIR$/article/java/basic/1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="2556">
+          <caret line="2305" column="14" lean-forward="false" selection-start-line="2305" selection-start-column="14" selection-end-line="2305" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/linux/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="2240" column="0" lean-forward="true" selection-start-line="2240" selection-start-column="0" selection-end-line="2240" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -878,96 +737,88 @@
             <element signature="e#53146#53289#0" expanded="false" />
             <element signature="e#53295#53435#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323750517" expanded="true" signature="53790:53956" ph="..." />
-            <marker date="1520323750517" expanded="true" signature="53883:53911" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/mongodb/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="342">
+          <caret line="2244" column="10" lean-forward="false" selection-start-line="2244" selection-start-column="10" selection-end-line="2244" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52403#52686#0" expanded="false" />
-            <element signature="e#52692#52840#0" expanded="false" />
-            <element signature="e#52846#52991#0" expanded="false" />
-            <element signature="e#52997#53141#0" expanded="false" />
-            <element signature="e#53147#53290#0" expanded="false" />
-            <element signature="e#53296#53436#0" expanded="false" />
+            <element signature="e#52404#52687#0" expanded="false" />
+            <element signature="e#52693#52841#0" expanded="false" />
+            <element signature="e#52847#52992#0" expanded="false" />
+            <element signature="e#52998#53142#0" expanded="false" />
+            <element signature="e#53148#53291#0" expanded="false" />
+            <element signature="e#53297#53437#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323752340" expanded="true" signature="53791:53957" ph="..." />
-            <marker date="1520323752340" expanded="true" signature="53884:53912" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/nodejs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="2246" column="6" lean-forward="false" selection-start-line="2246" selection-start-column="6" selection-end-line="2246" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52384#52667#0" expanded="false" />
-            <element signature="e#52673#52821#0" expanded="false" />
-            <element signature="e#52827#52972#0" expanded="false" />
-            <element signature="e#52978#53122#0" expanded="false" />
-            <element signature="e#53128#53271#0" expanded="false" />
-            <element signature="e#53277#53417#0" expanded="false" />
+            <element signature="e#52385#52668#0" expanded="false" />
+            <element signature="e#52674#52822#0" expanded="false" />
+            <element signature="e#52828#52973#0" expanded="false" />
+            <element signature="e#52979#53123#0" expanded="false" />
+            <element signature="e#53129#53272#0" expanded="false" />
+            <element signature="e#53278#53418#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323752512" expanded="true" signature="53772:53938" ph="..." />
-            <marker date="1520323752512" expanded="true" signature="53865:53893" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/php/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="2253" column="13" lean-forward="true" selection-start-line="2253" selection-start-column="13" selection-end-line="2253" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52369#52652#0" expanded="false" />
-            <element signature="e#52658#52806#0" expanded="false" />
-            <element signature="e#52812#52957#0" expanded="false" />
-            <element signature="e#52963#53107#0" expanded="false" />
-            <element signature="e#53113#53256#0" expanded="false" />
-            <element signature="e#53262#53402#0" expanded="false" />
+            <element signature="e#52370#52653#0" expanded="false" />
+            <element signature="e#52659#52807#0" expanded="false" />
+            <element signature="e#52813#52958#0" expanded="false" />
+            <element signature="e#52964#53108#0" expanded="false" />
+            <element signature="e#53114#53257#0" expanded="false" />
+            <element signature="e#53263#53403#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323752670" expanded="true" signature="53756:53922" ph="..." />
-            <marker date="1520323752670" expanded="true" signature="53849:53877" ph="..." />
+            <marker date="1520324220233" expanded="true" signature="53757:53923" ph="..." />
+            <marker date="1520324220233" expanded="true" signature="53850:53878" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/redis/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="361">
+          <caret line="2245" column="6" lean-forward="false" selection-start-line="2245" selection-start-column="6" selection-end-line="2245" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52381#52664#0" expanded="false" />
-            <element signature="e#52670#52818#0" expanded="false" />
-            <element signature="e#52824#52969#0" expanded="false" />
-            <element signature="e#52975#53119#0" expanded="false" />
-            <element signature="e#53125#53268#0" expanded="false" />
-            <element signature="e#53274#53414#0" expanded="false" />
+            <element signature="e#52382#52665#0" expanded="false" />
+            <element signature="e#52671#52819#0" expanded="false" />
+            <element signature="e#52825#52970#0" expanded="false" />
+            <element signature="e#52976#53120#0" expanded="false" />
+            <element signature="e#53126#53269#0" expanded="false" />
+            <element signature="e#53275#53415#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323753110" expanded="true" signature="53769:53935" ph="..." />
-            <marker date="1520323753110" expanded="true" signature="53862:53890" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/webserver/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="2238" column="0" lean-forward="false" selection-start-line="2238" selection-start-column="0" selection-end-line="2238" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -984,48 +835,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/article/windows/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="79" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="79" />
+        <state relative-caret-position="418">
+          <caret line="2245" column="6" lean-forward="false" selection-start-line="2245" selection-start-column="6" selection-end-line="2245" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52365#52648#0" expanded="false" />
-            <element signature="e#52654#52802#0" expanded="false" />
-            <element signature="e#52808#52953#0" expanded="false" />
-            <element signature="e#52959#53103#0" expanded="false" />
-            <element signature="e#53109#53252#0" expanded="false" />
-            <element signature="e#53258#53398#0" expanded="false" />
+            <element signature="e#52366#52649#0" expanded="false" />
+            <element signature="e#52655#52803#0" expanded="false" />
+            <element signature="e#52809#52954#0" expanded="false" />
+            <element signature="e#52960#53104#0" expanded="false" />
+            <element signature="e#53110#53253#0" expanded="false" />
+            <element signature="e#53259#53399#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323752055" expanded="true" signature="53753:53919" ph="..." />
-            <marker date="1520323752055" expanded="true" signature="53846:53874" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/article/java/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="2226" column="13" lean-forward="false" selection-start-line="2226" selection-start-column="13" selection-end-line="2226" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="494">
+          <caret line="2247" column="13" lean-forward="true" selection-start-line="2247" selection-start-column="13" selection-end-line="2247" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="2246" column="0" lean-forward="true" selection-start-line="2246" selection-start-column="0" selection-end-line="2246" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#52388#52671#0" expanded="false" />
+            <element signature="e#52677#52825#0" expanded="false" />
+            <element signature="e#52831#52976#0" expanded="false" />
+            <element signature="e#52982#53126#0" expanded="false" />
+            <element signature="e#53132#53275#0" expanded="false" />
+            <element signature="e#53281#53421#0" expanded="false" />
+            <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/git/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="2160" column="12" lean-forward="false" selection-start-line="2160" selection-start-column="12" selection-end-line="2160" selection-end-column="12" />
+        <state relative-caret-position="171">
+          <caret line="2241" column="0" lean-forward="true" selection-start-line="2241" selection-start-column="0" selection-end-line="2241" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#52378#52661#0" expanded="false" />
-            <element signature="e#52667#52815#0" expanded="false" />
-            <element signature="e#52821#52966#0" expanded="false" />
-            <element signature="e#52972#53116#0" expanded="false" />
-            <element signature="e#53122#53265#0" expanded="false" />
-            <element signature="e#53271#53411#0" expanded="false" />
+            <element signature="e#52379#52662#0" expanded="false" />
+            <element signature="e#52668#52816#0" expanded="false" />
+            <element signature="e#52822#52967#0" expanded="false" />
+            <element signature="e#52973#53117#0" expanded="false" />
+            <element signature="e#53123#53266#0" expanded="false" />
+            <element signature="e#53272#53412#0" expanded="false" />
             <element signature="n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <marker date="1520323751955" expanded="true" signature="53766:53932" ph="..." />
-            <marker date="1520323751955" expanded="true" signature="53859:53887" ph="..." />
           </folding>
         </state>
       </provider>
