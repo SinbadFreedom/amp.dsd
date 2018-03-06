@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/windows/faq/1.html">
-    <title>windows系统是32位还是64位</title>
-    <meta name="description" content="windows查看操作系统位数是32位还是64位 查看windows系统位数方式">
+    <link rel="canonical" href="https://dashidan.com/article/linux/ubuntu/4.html">
+    <title>linux安装配置Zookeeper及常用命令</title>
+    <meta name="description" content="linux系统zookeeper的下载,安装,设置zookeeper环境变量,启动及zookeeper的常用命令.">
     <style amp-custom>
         html {
             -webkit-text-size-adjust: 100%;
@@ -1835,30 +1835,43 @@
     <!-- 顶部面包屑导航-->
     <div class="text-left">
         <a href="https://amp.dashidan.com/index.html">首页</a> > <a
-            href="https://amp.dashidan.com/article/windows/index.html">windows</a> > windows系统是32位还是64位
+            href="https://amp.dashidan.com/article/linux/index.html">linux</a> > linux安装配置Zookeeper及常用命令
     </div>
 
     <div class="dsd_content">
         <!-- 文章内容-->
-        <div class="dsd_title"><h1>windows系统是32位还是64位</h1></div>
+        <div class="dsd_title"><h1>linux安装配置Zookeeper及常用命令</h1></div>
         <div id="xs_content_border">
             <div>
-                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 windows查看操作系统位数步骤</a><br><a href="#2">2
-                    linux查看系统位数</a></div>
+                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 linux下载zookeeper</a><br><a href="#2">2
+                    linux解压缩zookeeper源码</a><br><a href="#3">3 打开conf目录</a><br><a href="#4">4 拷贝zoo_samle.cfg
+                    为zoo.cfg</a><br><a href="#5">5 linux配置zookeeper环境变量</a><br><a href="#6">6 linux启动zookeeper</a><br><a
+                        href="#7">7 测试 </a></div>
             </div>
-            <div class="jumbotron">
-                <p>如果你的电脑还是32位操作系统, 建议还是重装下操作系统, 升级到64位操作系统.查看windows系统位数方式.</p>
-            </div>
-            <div id="1"><h3>1 windows查看操作系统位数步骤</h3></div>
-            <p>
-                右键点击<code>计算机</code>-&gt;<code>属性</code>-&gt;<code>系统</code>-&gt;<code>系统类型</code>标识了是<code>32位</code>还是<code>64位</code>.
-            </p>
-            <p>如图:<br/>
-                <amp-img layout="responsive" src="https://amp.dashidan.com/img/windows/basic/1-1.png"
-                         alt="图1-1"></amp-img>
-            </p>
-            <div id="2"><h3>2 linux查看系统位数</h3></div>
-            <p><a href="http://dashidan.com/article/linux/common/10.html#2">linux查看系统位数</a></p>
+            <div id="1"><h3>1 linux下载zookeeper</h3></div>
+            <pre class="prettyprint"><code>wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.5.2-alpha/zookeeper-3.5.2-alpha.tar.gz
+</code></pre>
+            <div id="2"><h3>2 linux解压缩zookeeper源码</h3></div>
+            <pre class="prettyprint"><code>tar -zxvf zookeeper-3.5.2-xxxx.tar.gz
+</code></pre>
+            <div id="3"><h3>3 打开conf目录</h3></div>
+            <pre class="prettyprint"><code>cd /zookeeper-3.5.2-alpha/conf
+</code></pre>
+            <div id="4"><h3>4 拷贝zoo_samle.cfg 为zoo.cfg</h3></div>
+            <pre class="prettyprint"><code>cp zoo_samle.cfg zoo.cfg
+</code></pre>
+            <div id="5"><h3>5 linux配置zookeeper环境变量</h3></div>
+            <pre class="prettyprint"><code>vim /etc/profile
+export PATH=/download/zookeeper-3.5.2-alpha:$PATH
+source /etc/profile
+</code></pre>
+            <div id="6"><h3>6 linux启动zookeeper</h3></div>
+            <pre class="prettyprint"><code>./zkServer.sh start
+</code></pre>
+            <div id="7"><h3>7 测试 </h3></div>
+            <p>通过telnet命令测试zookeeper默认端口2181是否开通:</p>
+            <pre class="prettyprint"><code>telnet dashidan.com 2181
+</code></pre>
         </div>
     </div>
 </div>
@@ -1866,7 +1879,7 @@
 <footer class="text-center navbar-fixed-bottom navbar-default">
     <div class="text-center">
         <a class="navbar-brand"
-           href="https://amp.dashidan.com/article/windows/faq/2.html">下一篇: 打开windows命令提示符</a>
+           href="https://amp.dashidan.com/article/linux/ubuntu/5.html">下一篇: Ubuntu允许root用户登录</a>
     </div>
     <div class="text-center">
         <a class="navbar-brand" href="https://amp.dashidan.com/index.html">目录</a>
