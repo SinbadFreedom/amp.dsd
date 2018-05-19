@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/html/faq/16.html">
-    <title>html网页自动跳转</title>
-    <meta name="description" content="常用的网页跳转实现方式 在head头部里加入meta标签 用js实现自动跳转页面 ">
+    <link rel="canonical" href="https://dashidan.com/article/java/faq/2.html">
+    <title>HashMap中的put和putIfAbsense区别 - java常见问题 - 大屎蛋教程网</title>
+    <meta name="description"
+          content="HashMap集合类中有put()方法，还提供了一个putIfAbsent方法，在项目中一个同事用错putIfAbsent方法，从而导致了一个比较严重的bug。在本文中总结了一下这两个方法的区别与应用场景, 避免用错。">
     <style amp-custom>
         html {
             -webkit-text-size-adjust: 100%;
@@ -1745,8 +1746,8 @@
     {
       "@context": "http://schema.org",
       "@type": "NewsArticle",
-      "headline": "html网页自动跳转",
-      "datePublished": "2018-03-17T23:37:40+08:00",
+      "headline": "HashMap中的put和putIfAbsense区别 - java常见问题 - 大屎蛋教程网",
+      "datePublished": "2018-05-19T14:20:06+08:00",
       "author": "大屎蛋教程网",
       "image": "https://dashidan.com/img/dsd_google.png",
       "publisher": "大屎蛋教程网"
@@ -1819,68 +1820,88 @@
 <body>
 <nav class="navbar navbar-default">
     <div class="navbar-header">
-        <a class="navbar-brand" href="https://amp.dashidan.com/index.html">大屎蛋教程网</a>
+        <a class="navbar-brand" href="https://amp.dashidan.comindex.html">大屎蛋教程网</a>
     </div>
 </nav>
 
 <div class="container-fluid">
-    <!-- 顶部面包屑导航-->
     <div class="text-left">
-        <a href="https://amp.dashidan.com/index.html">首页</a> > <a
-            href="https://amp.dashidan.com/article/html/index.html">html</a> > html网页自动跳转
+        <a href="https://amp.dashidan.comindex.html">首页</a> > <a
+            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 2.HashMap中的put和putIfAbsense区别
     </div>
 
     <div class="dsd_content">
-        <!-- 文章内容-->
-        <div class="dsd_title"><h1>html网页自动跳转</h1></div>
+        <div class="dsd_title"><h1>2.HashMap中的put和putIfAbsense区别</h1></div>
         <div id="xs_content_border">
             <div>
-                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 html在head头部里加入meta标签</a><br><a href="#2">2
-                    用js实现自动跳转页面</a></div>
+                <div class="dsd_catalog"><h3>目录</h3><a href="#1">1 HashMap中put方法和putIfAbsent方法区别</a><br><a href="#2">2
+                    HashMap如何判断key是否存在</a><br><a href="#2.1">&nbsp;&nbsp;2.1 hash()方法</a><br><a href="#2.2">&nbsp;&nbsp;2.2
+                    hashCode()方法</a></div>
             </div>
             <div class="jumbotron">
-                <p>网页中有些过度页面,需要等待几秒后跳转到另外一个页面.这个时候就用到了网页自动跳转的功能.有2种常用的网页跳转实现方式.</p>
+                <p>
+                    HashMap集合类中有put()方法，还提供了一个putIfAbsent方法，在项目中一个同事用错putIfAbsent方法，从而导致了一个比较严重的bug。在本文中总结了一下这两个方法的区别与应用场景,
+                    避免用错。</p>
             </div>
-            <div id="1"><h3>1 html在head头部里加入meta标签</h3></div>
-            <p>html示例代码:</p>
-            <pre class="prettyprint"><code>&lt;head&gt;
-    &lt;meta http-equiv="refresh" content="3;url=http://dashidan.com/"&gt;
-&lt;/head&gt;
+            <div id="1"><h3>1 HashMap中put方法和putIfAbsent方法区别</h3></div>
+            <ul>
+                <li>put方法</li>
+            </ul>
+            <p>HashMap中的put方式是将key和value放入Map队列中.如果key值已存在，则替换对应的value.</p>
+            <p>put方法源码:</p>
+            <pre class="prettyprint"><code>/**
+ * 大屎蛋教程网-dashidan.com
+ * Created by 大屎蛋 on 2018/5/18.
+ */
+public V put(K key, V value) {
+    return putVal(hash(key), key, value, false, true);
+}
 </code></pre>
             <ul>
-                <li>content</li>
+                <li>putIfAbsent方法</li>
             </ul>
-            <p>content 后边的参数"3;url=http://dashidan.com/"是一个整体.如果分开设置的话自动跳转无效.
-                设置在当前页面停留时间,单位为秒.url设置将要跳转到的页面路径.3秒后自动跳转到其他页面http://dashidan.com/.</p>
-            <p>推荐采用这种方式, 这个是最简单的实现页面延迟跳转方式, 而且浏览器都兼容.</p>
-            <div id="2"><h3>2 用js实现自动跳转页面</h3></div>
-            <p>需要浏览器开启javascript功能才能正常运行.自动跳转页面javascript代码示例:</p>
-            <p>js示例代码:</p>
-            <pre class="prettyprint"><code>&lt;html&gt;
-  &lt;script language=javascript&gt;
-      setTimeout('window.location="http://dashidan.com/"',3000)
-  &lt;/script&gt;
-&lt;/html&gt;
+            <p>与put方法的不同点是：如果key值已存在，则不替换对应的value.</p>
+            <p>putIfAbsense方法源码:</p>
+            <pre class="prettyprint"><code>/**
+ * 大屎蛋教程网-dashidan.com
+ * Created by 大屎蛋 on 2018/5/18.
+ */
+public V putIfAbsent(K key, V value) {
+    return putVal(hash(key), key, value, true, true);
+}
 </code></pre>
-            <ul>
-                <li>setTimeout</li>
-            </ul>
-            <p>这个是js的延迟执行方法, 里面有2个参数, 第一个参数表示执行的方法, 第二个参数是延迟执行的时间, 单位毫秒.</p>
-            <ul>
-                <li>window.location</li>
-            </ul>
-            <p>指定跳转到的页面, 后面的参数3000表示3秒后执行.</p>
+            <p>这两个方法的区别调用putVal方法的第三个参数true，表示如果存在不替换现有数据，如果false，替换现有数据。</p>
+            <div id="2"><h3>2 HashMap如何判断key是否存在</h3></div>
+            <p>HashMap通过Hash值来判断。这个值不是Object对象中提供的hashCode值。是通过HashMap中的hash()方法计算出来的.</p>
+            <p>该方法是通过hashCode返回的值，进行高位异或运算得出的。如果key值是空，返回0.</p>
+            <div id="2.1" class="dsd_title_c_2"><h4>2.1 hash()方法</h4></div>
+            <pre class="prettyprint"><code>/**
+ * 大屎蛋教程网-dashidan.com
+ * Created by 大屎蛋 on 2018/5/18.
+ */
+static final int hash(Object key) {
+    int h;
+    return (key == null) ? 0 : (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16);
+}
+</code></pre>
+            <div id="2.2" class="dsd_title_c_2"><h4>2.2 hashCode()方法</h4></div>
+            <p>hashCode()方法返回对象的哈希码。相同对象返回相同值。这个在JDK中是通过native方法实现。</p>
+            <pre class="prettyprint"><code>public native int hashCode();
+</code></pre>
         </div>
     </div>
 </div>
 
-<footer class="text-center navbar-fixed-bottom navbar-default">
-    <div class="text-center">
-        <a class="navbar-brand"
-           href="https://amp.dashidan.com/article/html/faq/17.html">下一篇: html页脚置于底部</a>
+<hr>
+
+<footer>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
+        <a href="https://dashidan.comarticle/java/faq/1.html"> &lt; 1.HashMap与ConcurrentHashMap的区别与应用场景</a>
     </div>
-    <div class="text-center">
-        <a class="navbar-brand" href="https://amp.dashidan.com/index.html">目录</a>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+        <a href="https://dashidan.comarticle/java/index.html">目录</a>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-left">
     </div>
 </footer>
 
