@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/java/jdk8/3.html">
-    <title>java拉姆达(Lambda)表达式 - java教程 - 大屎蛋教程网</title>
-    <meta name="description" content="java拉姆达(Lambda)表达式由来.命令式编程与函数式编程.java为什么会引入拉姆达(Lambda)表达式.java Lambda表达式的优点.">
+    <link rel="canonical" href="https://dashidan.com/article/java/profile/2.html">
+    <title>java数组拷贝的3种方式和效率对比 - java效率优化专题 - 大屎蛋教程网</title>
+    <meta name="description" content="Java语言中常用的数组拷贝方式有：for循环拷贝，通过Arrays.copyOf()方法，System.arraycopy和clone()方法拷贝。">
     <style amp-custom>
             html {
     -webkit-text-size-adjust: 100%;
@@ -1744,8 +1744,8 @@ footer > a {
     {
       "@context": "http://schema.org",
       "@type": "NewsArticle",
-      "headline": "java拉姆达(Lambda)表达式 - java教程 - 大屎蛋教程网",
-      "datePublished": "2018-05-26T15:09:21+08:00",
+      "headline": "java数组拷贝的3种方式和效率对比 - java效率优化专题 - 大屎蛋教程网",
+      "datePublished": "2018-05-26T15:09:22+08:00",
       "author": "大屎蛋教程网",
       "image": "https://dashidan.com/img/dsd_google.png",
       "publisher": "大屎蛋教程网"
@@ -1766,65 +1766,179 @@ footer > a {
 <div class="container-fluid">
     <div class="text-left">
         <a href="https://amp.dashidan.comindex.html">首页</a> > <a
-            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 3.Java兰姆达(Lambda)表达式
+            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 2.java数组拷贝的3种方式和效率对比
     </div>
 
     <div class="dsd_content">
-        <div class="dsd_title"><h1>3.Java兰姆达(Lambda)表达式</h1></div>
+        <div class="dsd_title"><h1>2.java数组拷贝的3种方式和效率对比</h1></div>
         <div id="xs_content_border">
-            <div><div class="dsd_catalog"><h3>目录</h3><a href="#1">1 什么是Lambda表达式</a><br><a href="#2">2 命令式编程(Imperative Programming)</a><br><a href="#3">3 函数式编程(Functional Programming)</a><br><a href="#4">4 Java为什么会引入Lambda表达式</a><br><a href="#5">5 java Lambda表达式的优点</a><br><a href="#6">6 参考文章</a></div></div><div class="jumbotron">
-    <p>javaJDK8.0开始引入了Lambda表达式,同时也是引入了一种新的编程思想-函数式编程(Functional Programming).Lambda表达式是函数式编程(Functional Programming)的基础.
-    </p>
+            <div><div class="dsd_catalog"><h3>目录</h3><a href="#1">1 测试场景</a><br><a href="#1.1">&nbsp;&nbsp;1.1 初始化数组</a><br><a href="#1.1">&nbsp;&nbsp;1.1 for循环拷贝数组</a><br><a href="#1.2">&nbsp;&nbsp;1.2 Arrays.copyOf拷贝数组</a><br><a href="#1.3">&nbsp;&nbsp;1.3 System.arraycopy复制数组</a><br><a href="#1.4">&nbsp;&nbsp;1.4 clone()方法拷贝数组</a><br><a href="#2">2 测试这几种复制方法</a><br><a href="#2.1">&nbsp;&nbsp;2.1 示例代码</a><br><a href="#3">3 结论</a></div></div><div class="jumbotron">
+<p>Java语言中常用的数组拷贝方式有：for循环拷贝，通过Arrays.copyOf()方法，System.arraycopy和clone()方法拷贝。</p>
 </div>
-<div id="1"><h3>1 什么是Lambda表达式</h3></div>
-<p>Lambda表达式(lambda expression)是<a href="https://dashidan.comarticle/java/jdk8/1.html">JDK8新增语法特性</a>之一, Lambda表达式一个匿名函数,Lambda表达式基于数学中的λ演算得名.编程中提到的lambda表达式,通常是在需要一个函数,但是又不想费神去命名一个函数的场合下使用,也就是指匿名函数.如果接口只有一个方法,这时使用匿名内部类时代码看上去不清晰也不简洁.在这种情况下,你会希望将函数(functionality)作为参数传递进去,来让代码看起来更加简洁.Lambda表达式可以实现这种需求,将函数作为方法参数,者将代码作为数据.可以将单方法(single-method)接口更加简洁.</p>
-<p><amp-img layout="responsive" src="https://dashidan.comimg/common/example.jpg" alt="举个栗子" width="224" height="296"></amp-img></p>
-<p>Comparable接口中只有一个方法compareTo.</p>
-<pre class="prettyprint"><code class="java language-java">/**
- * 大屎蛋教程网 http://dashidan.com
- */
-public interface Comparable&lt;T&gt; {
-    public int compareTo(T o);
+<div id="1"><h3>1 测试场景</h3></div>
+<p>我们用最简单的整数数组来测试。首先创建一个整型数组，并且初始化数据。然后分别用这3种方式来拷贝数组同样的次数。来测分别试这三种情况的效率。</p>
+<div id="1.1"class="dsd_title_c_2"><h4>1.1 初始化数组</h4></div>
+<pre class="prettyprint"><code>int len = 1000;
+int[] arr0 = new int[len];
+for (int i = 0; i &lt; len; i++) {
+    arr0[i] = i;
 }
 </code></pre>
-<div class="bs-callout bs-callout-warning">
-    在Java lambda的设计过程中,有一段时间是说所有的SAM(Single Abstract Method)类型(包括只有一个抽象方法的接口以及只有一个抽象方法的抽象类)都可以当作lambda表达式的目标类型,但后面真正的规范把设计收紧了,只支持单抽象方法的接口才算数.
-</div>
-<div id="2"><h3>2 命令式编程(Imperative Programming)</h3></div>
-<p>所有的命令式语言都被设计来高效地使用冯诺依曼体系结构的计算机.最初的命令式语言的目的就是取代汇编语言,对机器命令进行进一步抽象.因此,命令式语言带有强烈的硬件结构特征.命令式语言的核心特性有:模拟存储单元的变量、基于传输操作的赋值语句,以及迭代形式的循环运算.命令式语言的基础是语句(特别是赋值),它们通过修改存储器的值而产生副作用(side effect)的方式去影响后续的计算.</p>
-<p><amp-img layout="responsive" src="https://dashidan.comimg/common/example.jpg" alt="举个栗子" width="224" height="296"></amp-img></p>
-<p>在Java的典型的for循环中,通过修改变量<code>i</code>的值,来控制循环逻辑的执行.</p>
-<pre class="prettyprint"><code class="java language-java">/**
- * 大屎蛋教程网 http://dashidan.com
- */
-for(int i = 0; i &lt; 10; i++) {
-    ...
+<div id="1.1"class="dsd_title_c_2"><h4>1.1 for循环拷贝数组</h4></div>
+<p>采用for循环遍历数组，然后根据数组下标对应赋值，来实现复制数组。</p>
+<pre class="prettyprint"><code>/** 1 for 循环拷贝*/
+int[] arr1 = new int[len];
+for (int i = 0; i &lt; len; i++) {
+    arr1[i] = arr0[i];
 }
 </code></pre>
-<div class="bs-callout bs-callout-warning">
-    在JDK8之前,Java没有引入Lambda之前可以说是个典型的命令式语言.在JDK8引入了Lambda表达式后,也随之引入了函数式编程的概念.
-</div>
-<div id="3"><h3>3 函数式编程(Functional Programming)</h3></div>
-<p>这种能够接受一个函数作为参数的函数叫做"高阶函数"(higher-order function),是来自函数式编程(functional programming)的思想.函数式编程将电脑运算视为函数的计算.函数式语言设计的基础是Lambda表达式,函数式语言进行计算的主要是将函数作用与给定参数之上.函数式语言没有命令式语言所必需的那种变量,可以没有赋值语句,也可以没有循环.一个程序就是函数定义和函数应用的说明,一个程序的执行就是对函数应用的求值.</p>
-<div id="4"><h3>4 Java为什么会引入Lambda表达式</h3></div>
-<p>之所以产生如Lambda表达式等这些新特性,背后的驱动力是硬件的多核化发展趋势.在此趋势下,芯片设计者只能采用多核并行的设计思路,而软件开发者必须能够更好地利用底层硬件的并发特性.Lambda表达式是函数式编程的基础,已经广泛的在其他语言中应用,比如 Groovy,Ruby,Python等.Java中的Lambda表达式和其他语言有所不同,在Java中Lambda是基于SAM(single abstract method)单方法接口实现.</p>
-<p>函数式编程对于Java语言来说是一个全新的视角,也是一种技术发展的趋势.在大数据发展越来越迅猛的时代,这个是Java跟随时代的需要做的必要改进.</p>
-<div id="5"><h3>5 java Lambda表达式的优点</h3></div>
+<div id="1.2"class="dsd_title_c_2"><h4>1.2 Arrays.copyOf拷贝数组</h4></div>
+<p>java.util.Arrays类中提供了一个copyOf()方法，通过这个方法可以实现数组复制。这个方法的原理是内部创建了一个数组对象，然后通过System.arraycopy来实现数组复制.</p>
 <ul>
-<li>更加紧凑的代码</li>
+<li>copyOf方法源码</li>
 </ul>
-<p>比如Java中现有的匿名内部类以及监听器(listeners)和事件处理器(handlers)都显得很冗长,可以通过Lambda表达式来降低代码量.</p>
+<pre class="prettyprint"><code>public static int[] copyOf(int[] original, int newLength) {
+    int[] copy = new int[newLength];
+    System.arraycopy(original, 0, copy, 0,
+                     Math.min(original.length, newLength));
+    return copy;
+}
+</code></pre>
 <ul>
-<li>更好地支持多核处理</li>
+<li>System.arraycopy源码</li>
 </ul>
-<p>通过Java 8新增的Lambda表达式,可以很方便地并行操作大集合,充分发挥多核CPU的潜能.并行处理函数如filter、map和reduce.</p>
+<p>System.arraycop方法是通过native方法,Java虚拟机内部实现的。</p>
+<pre class="prettyprint"><code>public static native void arraycopy(Object src,  int  srcPos,
+                                    Object dest, int destPos,
+                                    int length);
+</code></pre>
 <ul>
-<li>使集合操作得到了改善</li>
+<li>调用Arrays.copyOf()方法</li>
 </ul>
-<p>JDK8引入stream API.将大数据处理常用的map、reduce、filter这样的基本函数式编程的概念与Java集合结合起来.随之而来的是map、reduce、filter等操作都可以并行化,更加适合大数据的并行处理.</p>
-<div id="6"><h3>6 参考文章</h3></div>
-<p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html</a></p>
-<p><a href="https://www.developer.com/java/start-using-java-lambda-expressions.html">https://www.developer.com/java/start-using-java-lambda-expressions.html</a></p>
+<pre class="prettyprint"><code>int[] arr2 = Arrays.copyOf(arr0, arr0.length);
+</code></pre>
+<div id="1.3"class="dsd_title_c_2"><h4>1.3 System.arraycopy复制数组</h4></div>
+<p>System.arraycopy方法提供了从数组中截取一部分，生成一个新的数组，也是Arrays.copyOf()方法的底层实现。</p>
+<pre class="prettyprint"><code>int[] arr3 = new int[len];
+System.arraycopy(arr0, 0, arr3, 0, arr0.length);
+</code></pre>
+<div id="1.4"class="dsd_title_c_2"><h4>1.4 clone()方法拷贝数组</h4></div>
+<p>Java的Object</p>
+<pre class="prettyprint"><code>int[] arr3 = arr0.clone();
+</code></pre>
+<div id="2"><h3>2 测试这几种复制方法</h3></div>
+<p>将上述4中复制方式，对一个长度1000的数组，复制一千万次，来看一下执行时间。</p>
+<div id="2.1"class="dsd_title_c_2"><h4>2.1 示例代码</h4></div>
+<pre class="prettyprint"><code>package com.dashidan.profile1;
+
+import java.util.Arrays;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 2.java数组复制的3种方式和效率对比
+ *
+ * Created by 大屎蛋 on 2018/5/23.
+ */
+public class Demo1 {
+
+    public static void main(String[] args) {
+        /** 初始化数组*/
+        int len = 1000;
+        int count = 10000000;
+        int[] arr0 = new int[len];
+        for (int i = 0; i &lt; len; i++) {
+            arr0[i] = i;
+        }
+
+        long t1 = System.currentTimeMillis();
+
+        for (int c = 0; c &lt; count; c++) {
+            /** 1 for 循环复制*/
+            int[] arr1 = new int[len];
+            for (int i = 0; i &lt; len; i++) {
+                arr1[i] = arr0[i];
+            }
+        }
+
+        long t2 = System.currentTimeMillis();
+
+        /** 2 Arrays.copyOf复制数组*/
+        for (int c = 0; c &lt; count; c++) {
+            int[] arr2 = Arrays.copyOf(arr0, arr0.length);
+        }
+
+        long t3 = System.currentTimeMillis();
+
+        /** 3 System.arraycopy复制数组*/
+        for (int c = 0; c &lt; count; c++) {
+            int[] arr3 = new int[len];
+            System.arraycopy(arr0, 0, arr3, 0, arr0.length);
+        }
+
+        long t4 = System.currentTimeMillis();
+        /** 4 Object.clone() 复制数组*/
+        for (int c = 0; c &lt; count; c++) {
+            int[] arr4 = arr0.clone();
+        }
+
+        long t5 = System.currentTimeMillis();
+
+        System.out.println("1 for 循环复制: " + (t2 - t1));
+        System.out.println("2 Arrays.copyOf复制数组:  " + (t3 - t2));
+        System.out.println("3 System.arraycopy复制数组:  " + (t4 - t3));
+        System.out.println("4 Object.clone() 复制数组: * " + (t5 - t4));
+    }
+}
+</code></pre>
+<p>输出结果:</p>
+<pre class="prettyprint"><code>1 for 循环复制: 4451
+2 Arrays.copyOf复制数组:  6474
+3 System.arraycopy复制数组:  6439
+4 Object.clone() 复制数组: * 6436
+</code></pre>
+<p>这个输出结果根据电脑和运行环境，可能会不一致。从这个输出可以看出：</p>
+<p>for循环遍历数组复制的方式用时最小.比其他3中少了50%左右的时间。</p>
+<ul>
+<li>其他不变，只将循环次数改为一百万次的输出结果</li>
+</ul>
+<pre class="prettyprint"><code>1 for 循环复制: 640
+2 Arrays.copyOf复制数组:  828
+3 System.arraycopy复制数组:  643
+4 Object.clone() 复制数组: * 645
+</code></pre>
+<p>这个差距就很小了。</p>
+<ul>
+<li>其他不变，循环次数改为一千万次的输出结果，初始数组的长度100的输出结果</li>
+</ul>
+<pre class="prettyprint"><code>1 for 循环复制: 948
+2 Arrays.copyOf复制数组:  709
+3 System.arraycopy复制数组:  659
+4 Object.clone() 复制数组: * 666
+</code></pre>
+<p>这个差距也不大。反而是for循环遍历耗时最多。</p>
+<ul>
+<li>其他不变，循环次数改为一千万次的输出结果，初始数组的长度10的输出结果</li>
+</ul>
+<pre class="prettyprint"><code>1 for 循环复制: 250
+2 Arrays.copyOf复制数组:  127
+3 System.arraycopy复制数组:  157
+4 Object.clone() 复制数组: * 193
+</code></pre>
+<p>在数组长度为10的时候，for循环遍历赋值耗时要超过其他3种方式。</p>
+<ul>
+<li>其他不变，循环次数改为一百万次，初始数组的长度10000的输出结果</li>
+</ul>
+<pre class="prettyprint"><code>1 for 循环复制: 5851
+2 Arrays.copyOf复制数组:  6471
+3 System.arraycopy复制数组:  6443
+4 Object.clone() 复制数组:  6485
+</code></pre>
+<p>这个输出结果差不多。</p>
+<div id="3"><h3>3 结论</h3></div>
+<p>通过上述测试代码的输出数据，可以简单分析一下，当数组长度超过一定值的时候(测试代码中，长度改为1000，这个值不精确)，for循环遍历赋值，效率会略高出其他3种方式。</p>
+<p>另外在运行次数长的时候（测试代码改为运行1千万次，数组长度1000）的时候，for循环遍历赋值效率最高，而且优势明显(快50%左右)。数组长度改为100，就没那么明显了。</p>
+<p>System.arraycopy提供了截取数组中的一部分来生成新的数组，这个功能很方便。（也可以用for循环遍历来实现）。</p>
+<p>Arrays.copyOf()和clone()方法可以复制整个数组，在数组长度比较短的时候，代码比较简介，推荐采用。</p>
         </div>
     </div>
 </div>
@@ -1833,13 +1947,13 @@ for(int i = 0; i &lt; 10; i++) {
 
 <footer>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
-            <a href="https://dashidan.comarticle/java/jdk8/2.html"> &lt; 2.JDK8函数式接口</a>
+            <a href="https://dashidan.comarticle/java/profile/1.html"> &lt; 1.for循环中的效率优化</a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
         <a href="https://dashidan.comarticle/java/index.html">目录</a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-left">
-            <a href="https://dashidan.comarticle/java/jdk8/4.html"> 4.java拉姆达(Lambda)表达式应用 &gt;</a>
+            <a href="https://dashidan.comarticle/java/profile/3.html"> 3.java浮点数运算和整数型运算的效率比较 &gt;</a>
     </div>
 </footer>
 

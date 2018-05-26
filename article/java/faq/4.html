@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/java/jdk8/3.html">
-    <title>java拉姆达(Lambda)表达式 - java教程 - 大屎蛋教程网</title>
-    <meta name="description" content="java拉姆达(Lambda)表达式由来.命令式编程与函数式编程.java为什么会引入拉姆达(Lambda)表达式.java Lambda表达式的优点.">
+    <link rel="canonical" href="https://dashidan.com/article/java/faq/4.html">
+    <title>java ArrayListt原理及转化成数组常用方法 - java常见问题 - 大屎蛋教程网</title>
+    <meta name="description" content="在我做的一个模块中，会用到遍历一个集合类，遍历的同时根据条件判断集合中的对象，如果不符合条件则将该对象从集合中移除。这种情况很容易产生ConcurrentModificationExceptionException，这个异常会导致程序停止继续运行，所以遇到这个异常必须要处理来保证程序正确运行。">
     <style amp-custom>
             html {
     -webkit-text-size-adjust: 100%;
@@ -1744,8 +1744,8 @@ footer > a {
     {
       "@context": "http://schema.org",
       "@type": "NewsArticle",
-      "headline": "java拉姆达(Lambda)表达式 - java教程 - 大屎蛋教程网",
-      "datePublished": "2018-05-26T15:09:21+08:00",
+      "headline": "java ArrayListt原理及转化成数组常用方法 - java常见问题 - 大屎蛋教程网",
+      "datePublished": "2018-05-26T15:09:22+08:00",
       "author": "大屎蛋教程网",
       "image": "https://dashidan.com/img/dsd_google.png",
       "publisher": "大屎蛋教程网"
@@ -1766,65 +1766,382 @@ footer > a {
 <div class="container-fluid">
     <div class="text-left">
         <a href="https://amp.dashidan.comindex.html">首页</a> > <a
-            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 3.Java兰姆达(Lambda)表达式
+            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 4.ConcurrentModifyException的产生原因及如何避免
     </div>
 
     <div class="dsd_content">
-        <div class="dsd_title"><h1>3.Java兰姆达(Lambda)表达式</h1></div>
+        <div class="dsd_title"><h1>4.ConcurrentModifyException的产生原因及如何避免</h1></div>
         <div id="xs_content_border">
-            <div><div class="dsd_catalog"><h3>目录</h3><a href="#1">1 什么是Lambda表达式</a><br><a href="#2">2 命令式编程(Imperative Programming)</a><br><a href="#3">3 函数式编程(Functional Programming)</a><br><a href="#4">4 Java为什么会引入Lambda表达式</a><br><a href="#5">5 java Lambda表达式的优点</a><br><a href="#6">6 参考文章</a></div></div><div class="jumbotron">
-    <p>javaJDK8.0开始引入了Lambda表达式,同时也是引入了一种新的编程思想-函数式编程(Functional Programming).Lambda表达式是函数式编程(Functional Programming)的基础.
-    </p>
+            <div><div class="dsd_catalog"><h3>目录</h3><a href="#1">1 关于ConcurrentModificationException</a><br><a href="#2">2 单线程触发场景举例</a><br><a href="#2.1">&nbsp;&nbsp;2.1 单线程触发举例</a><br><a href="#2.2">&nbsp;&nbsp;2.2 解决单线程环境的ConcurrentModificationException异常</a><br><a href="#2.3">&nbsp;&nbsp;2.3 ArrayList集合改为CopyOnWriteArrayLis</a><br><a href="#2.4">&nbsp;&nbsp;2.4 通过迭代器遍历删除</a><br><a href="#2.5">&nbsp;&nbsp;2.5 这两种方式的效率比较</a><br><a href="#3">3 多线程触发举例</a><br><a href="#3.1">&nbsp;&nbsp;3.1 多线程触发步骤</a><br><a href="#3.2">&nbsp;&nbsp;3.2 示例代码</a><br><a href="#3.3">&nbsp;&nbsp;3.3 解决多线程环境的ConcurrentModificationException异常</a><br><a href="#3.4">&nbsp;&nbsp;3.4 采用ConcurrentHashMap替换HashMap</a><br><a href="#4">4 其他方法</a></div></div><div class="jumbotron">
+<p>在我做的一个模块中，会用到遍历一个集合类，遍历的同时根据条件判断集合中的对象，如果不符合条件则将该对象从集合中移除。这种情况很容易产生ConcurrentModificationExceptionException，这个异常会导致程序停止继续运行，所以遇到这个异常必须要处理来保证程序正确运行。
+</p>
 </div>
-<div id="1"><h3>1 什么是Lambda表达式</h3></div>
-<p>Lambda表达式(lambda expression)是<a href="https://dashidan.comarticle/java/jdk8/1.html">JDK8新增语法特性</a>之一, Lambda表达式一个匿名函数,Lambda表达式基于数学中的λ演算得名.编程中提到的lambda表达式,通常是在需要一个函数,但是又不想费神去命名一个函数的场合下使用,也就是指匿名函数.如果接口只有一个方法,这时使用匿名内部类时代码看上去不清晰也不简洁.在这种情况下,你会希望将函数(functionality)作为参数传递进去,来让代码看起来更加简洁.Lambda表达式可以实现这种需求,将函数作为方法参数,者将代码作为数据.可以将单方法(single-method)接口更加简洁.</p>
-<p><amp-img layout="responsive" src="https://dashidan.comimg/common/example.jpg" alt="举个栗子" width="224" height="296"></amp-img></p>
-<p>Comparable接口中只有一个方法compareTo.</p>
-<pre class="prettyprint"><code class="java language-java">/**
- * 大屎蛋教程网 http://dashidan.com
+<div id="1"><h3>1 关于ConcurrentModificationException</h3></div>
+<p>ConcurrentModificationException这个异常是从JDK1.2时就存在。当方法检测到对象的并发修改，但不允许这种修改时，抛出此异常。这个异常在单线程和多线程运行环境都可以产生。</p>
+<p>某个线程在 Collection 上进行迭代时，通常不允许另一个线性修改该Collection。通常在这些情况下，迭代的结果是不确定的。如果检测到这种行为，一些迭代器实现（包括JRE提供的所有通用collection实现）可能选择抛出此异常。</p>
+<p>执行该操作的迭代器称为快速失败迭代器，因为迭代器很快就完全失败，而不会冒着在将来某个时间任意发生不确定行为的风险。</p>
+<p>执行该操作的迭代器称为快速失败迭代器，因为迭代器很快就完全失败，而不会冒着在将来某个时间任意发生不确定行为的风险。迭代器的快速失败行为无法得到保证，因为一般来说，不可能对是否出现不同步并发修改做出任何硬性保证。快速失败操作会尽最大努力抛出ConcurrentModificationException。</p>
+<p>因此，为提高此类操作的正确性而编写一个依赖于此异常的程序是错误的做法，正确做法是：ConcurrentModificationException 应该仅用于检测 bug。</p>
+<div id="2"><h3>2 单线程触发场景举例</h3></div>
+<div id="2.1"class="dsd_title_c_2"><h4>2.1 单线程触发举例</h4></div>
+<p>如果线程使用快速失败迭代器在collection上迭代时直接修改该collection，则迭代器将抛出此异常。</p>
+<p>触发场景
+1.初始化集合类访入100个对象，并给这些对象的属性value值赋1-100的值。
+2.遍历该集合类，判断对象的value值小于10则删除。
+3.运行程序会抛出ConcurrentModificationException异常。</p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.ArrayList;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
  */
-public interface Comparable&lt;T&gt; {
-    public int compareTo(T o);
+public class Demo1 {
+
+    public static void main(String[] args) {
+        /** 初始化集合类*/
+        ArrayList&lt;TestObj&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 100; i++) {
+            list.add(new TestObj(i));
+        }
+
+        /** 遍历时删除元素*/
+        for (TestObj obj : list) {
+            if (obj.getValue() &lt; 10) {
+                /** 这里会抛出ConcurrentModificationException*/
+                list.remove(obj);
+            }
+        }
+    }
+}
+
+class TestObj {
+    int value;
+
+    public TestObj(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
 </code></pre>
-<div class="bs-callout bs-callout-warning">
-    在Java lambda的设计过程中,有一段时间是说所有的SAM(Single Abstract Method)类型(包括只有一个抽象方法的接口以及只有一个抽象方法的抽象类)都可以当作lambda表达式的目标类型,但后面真正的规范把设计收紧了,只支持单抽象方法的接口才算数.
-</div>
-<div id="2"><h3>2 命令式编程(Imperative Programming)</h3></div>
-<p>所有的命令式语言都被设计来高效地使用冯诺依曼体系结构的计算机.最初的命令式语言的目的就是取代汇编语言,对机器命令进行进一步抽象.因此,命令式语言带有强烈的硬件结构特征.命令式语言的核心特性有:模拟存储单元的变量、基于传输操作的赋值语句,以及迭代形式的循环运算.命令式语言的基础是语句(特别是赋值),它们通过修改存储器的值而产生副作用(side effect)的方式去影响后续的计算.</p>
-<p><amp-img layout="responsive" src="https://dashidan.comimg/common/example.jpg" alt="举个栗子" width="224" height="296"></amp-img></p>
-<p>在Java的典型的for循环中,通过修改变量<code>i</code>的值,来控制循环逻辑的执行.</p>
-<pre class="prettyprint"><code class="java language-java">/**
- * 大屎蛋教程网 http://dashidan.com
+<p>运行结果:</p>
+<pre class="prettyprint"><code>Exception in thread "main" java.util.ConcurrentModificationException
+    at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
+    at java.util.ArrayList$Itr.next(ArrayList.java:851)
+    at com.dashidan.faq4.Demo1.main(Demo1.java:20)
+</code></pre>
+<p>看.抛出这个异常就是这么简单。</p>
+<div id="2.2"class="dsd_title_c_2"><h4>2.2 解决单线程环境的ConcurrentModificationException异常</h4></div>
+<p>单线程环境中可以通过将ArrayList集合改为CopyOnWriteArrayList，或者可以通过迭代器遍历删除，可以避免出现ConcurrentModificationException异常.</p>
+<div id="2.3"class="dsd_title_c_2"><h4>2.3 ArrayList集合改为CopyOnWriteArrayLis</h4></div>
+<p>示例代码:</p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.concurrent.CopyOnWriteArrayList;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
  */
-for(int i = 0; i &lt; 10; i++) {
-    ...
+public class Demo2 {
+
+    public static void main(String[] args) {
+        /** 初始化集合类*/
+        CopyOnWriteArrayList&lt;TestObj&gt; list = new CopyOnWriteArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 100; i++) {
+            list.add(new TestObj(i));
+        }
+
+        /** 遍历时删除元素*/
+        for (TestObj obj : list) {
+            if (obj.getValue() &lt; 10) {
+                /** 这里不会抛出ConcurrentModificationException*/
+                list.remove(obj);
+            }
+        }
+
+        System.out.println();
+    }
 }
 </code></pre>
-<div class="bs-callout bs-callout-warning">
-    在JDK8之前,Java没有引入Lambda之前可以说是个典型的命令式语言.在JDK8引入了Lambda表达式后,也随之引入了函数式编程的概念.
-</div>
-<div id="3"><h3>3 函数式编程(Functional Programming)</h3></div>
-<p>这种能够接受一个函数作为参数的函数叫做"高阶函数"(higher-order function),是来自函数式编程(functional programming)的思想.函数式编程将电脑运算视为函数的计算.函数式语言设计的基础是Lambda表达式,函数式语言进行计算的主要是将函数作用与给定参数之上.函数式语言没有命令式语言所必需的那种变量,可以没有赋值语句,也可以没有循环.一个程序就是函数定义和函数应用的说明,一个程序的执行就是对函数应用的求值.</p>
-<div id="4"><h3>4 Java为什么会引入Lambda表达式</h3></div>
-<p>之所以产生如Lambda表达式等这些新特性,背后的驱动力是硬件的多核化发展趋势.在此趋势下,芯片设计者只能采用多核并行的设计思路,而软件开发者必须能够更好地利用底层硬件的并发特性.Lambda表达式是函数式编程的基础,已经广泛的在其他语言中应用,比如 Groovy,Ruby,Python等.Java中的Lambda表达式和其他语言有所不同,在Java中Lambda是基于SAM(single abstract method)单方法接口实现.</p>
-<p>函数式编程对于Java语言来说是一个全新的视角,也是一种技术发展的趋势.在大数据发展越来越迅猛的时代,这个是Java跟随时代的需要做的必要改进.</p>
-<div id="5"><h3>5 java Lambda表达式的优点</h3></div>
+<div id="2.4"class="dsd_title_c_2"><h4>2.4 通过迭代器遍历删除</h4></div>
+<p>通过集合类的iterator()方法获取迭代器对象Iterator<TestObj>,通过迭代器对象的iterator.hasNext()方法判断是否还有数据，如果有的话，通过iterator.next()方法得到下一个对象，然后通过iterator.remove()方法删除.在单线程环境中这样可以避免出现ConcurrentModificationException。</p>
+<p>示例代码:</p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
+ */
+public class Demo3 {
+
+    public static void main(String[] args) {
+        for (int n = 0; n &lt; 1000000; n++) {
+            /** 初始化集合类*/
+            ArrayList&lt;TestObj&gt; list = new ArrayList&lt;&gt;();
+            for (int i = 0; i &lt; 100; i++) {
+                list.add(new TestObj(i));
+            }
+
+            /** 遍历时删除元素*/
+            Iterator&lt;TestObj&gt; iterator = list.iterator();
+            while (iterator.hasNext()) {
+                TestObj testObj = iterator.next();
+                if (testObj.getValue() &lt; 10) {
+                    iterator.remove();
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<div id="2.5"class="dsd_title_c_2"><h4>2.5 这两种方式的效率比较</h4></div>
+<p>每个都执行一百万次比较时间：</p>
 <ul>
-<li>更加紧凑的代码</li>
+<li>Demo2测试代码</li>
 </ul>
-<p>比如Java中现有的匿名内部类以及监听器(listeners)和事件处理器(handlers)都显得很冗长,可以通过Lambda表达式来降低代码量.</p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.concurrent.CopyOnWriteArrayList;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
+ */
+public class Demo2 {
+
+    public static void main(String[] args) {
+        long t1 = System.currentTimeMillis();
+        for (int n = 0; n &lt; 1000000; n++) {
+            /** 初始化集合类*/
+            CopyOnWriteArrayList&lt;TestObj&gt; list = new CopyOnWriteArrayList&lt;&gt;();
+            for (int i = 0; i &lt; 100; i++) {
+                list.add(new TestObj(i));
+            }
+
+            /** 遍历时删除元素*/
+            for (TestObj obj : list) {
+                if (obj.getValue() &lt; 10) {
+                    /** 这里不会抛出ConcurrentModificationException*/
+                    list.remove(obj);
+                }
+            }
+        }
+
+        long t2 = System.currentTimeMillis();
+        System.out.println("t2 - t1 " + (t2 - t1));
+    }
+}
+</code></pre>
+<p>输出结果:</p>
+<pre class="prettyprint"><code>t2 - t1 7013
+</code></pre>
 <ul>
-<li>更好地支持多核处理</li>
+<li>Demo1测试代码</li>
 </ul>
-<p>通过Java 8新增的Lambda表达式,可以很方便地并行操作大集合,充分发挥多核CPU的潜能.并行处理函数如filter、map和reduce.</p>
-<ul>
-<li>使集合操作得到了改善</li>
-</ul>
-<p>JDK8引入stream API.将大数据处理常用的map、reduce、filter这样的基本函数式编程的概念与Java集合结合起来.随之而来的是map、reduce、filter等操作都可以并行化,更加适合大数据的并行处理.</p>
-<div id="6"><h3>6 参考文章</h3></div>
-<p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html</a></p>
-<p><a href="https://www.developer.com/java/start-using-java-lambda-expressions.html">https://www.developer.com/java/start-using-java-lambda-expressions.html</a></p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
+ */
+public class Demo3 {
+
+    public static void main(String[] args) {
+        long t1 = System.currentTimeMillis();
+        for (int n = 0; n &lt; 1000000; n++) {
+            /** 初始化集合类*/
+            ArrayList&lt;TestObj&gt; list = new ArrayList&lt;&gt;();
+            for (int i = 0; i &lt; 100; i++) {
+                list.add(new TestObj(i));
+            }
+
+            /** 遍历时删除元素*/
+            Iterator&lt;TestObj&gt; iterator = list.iterator();
+            while (iterator.hasNext()) {
+                TestObj testObj = iterator.next();
+                if (testObj.getValue() &lt; 10) {
+                    iterator.remove();
+                }
+            }
+        }
+        long t2 = System.currentTimeMillis();
+        System.out.println("t2 - t1 " + (t2 - t1));
+    }
+}
+</code></pre>
+<p>输出结果:</p>
+<pre class="prettyprint"><code>t2 - t1 1919
+</code></pre>
+<p>输出结果可能不一样，但可以从数据上看出第二种方法效率高于第一种方法.</p>
+<p>单线程环境中推荐第二种方式，第二种方式的适应性适应性更广，继承自Collection类的集合类，都可以采用这种方式。</p>
+<div id="3"><h3>3 多线程触发举例</h3></div>
+<p>多线程情景中，一个线程遍历，一个线程修改，即使采用迭代器(Iterator)来遍历还是会出现ConcurrentModificationException异常，单线程情境下安全的操作，多线程情境中不再安全。</p>
+<div id="3.1"class="dsd_title_c_2"><h4>3.1 多线程触发步骤</h4></div>
+<p>1.初始化一个集合类。
+2.启动一个线程随机删除数据。
+3.主线程不停的遍历该集合。</p>
+<div id="3.2"class="dsd_title_c_2"><h4>3.2 示例代码</h4></div>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Random;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
+ */
+public class Demo4 {
+
+    public static void main(String[] args) {
+        /** 初始化集合类*/
+        ArrayList&lt;TestObj&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 10000000; i++) {
+            list.add(new TestObj(i));
+        }
+
+        /**启动一个线程随机删除数据*/
+        new Thread(new ThreadClass(list)).start();
+
+        /** 遍历元素*/
+&lt;TestObj&gt; iterator = list.iterator();
+        while (iterator.hasNext()) {
+            TestObj testObj = iterator.next();
+        }
+    }
+}
+
+
+class ThreadClass implements Runnable {
+
+    List&lt;TestObj&gt; list;
+
+    public ThreadClass(List&lt;TestObj&gt; list) {
+        this.list = list;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            int index = new Random().nextInt(list.size());
+            list.remove(index);
+        }
+    }
+}
+</code></pre>
+<div id="3.3"class="dsd_title_c_2"><h4>3.3 解决多线程环境的ConcurrentModificationException异常</h4></div>
+<p>将ArrayList改为CopyOnWriteArrayList在多线程环境中同样可以避免出现这个异常。</p>
+<p>示例代码:</p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
+ */
+public class Demo5 {
+    public static void main(String[] args) {
+        /** 初始化集合类*/
+        ArrayList&lt;TestObj&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 10000000; i++) {
+            list.add(new TestObj(i));
+        }
+
+        CopyOnWriteArrayList&lt;TestObj&gt; list1 = new CopyOnWriteArrayList&lt;&gt;(list);
+
+        /**启动一个线程随机删除数据*/
+        new Thread(new ThreadClass(list1)).start();
+
+        /** 遍历元素*/
+        Iterator&lt;TestObj&gt; iterator = list1.iterator();
+        while (iterator.hasNext()) {
+            TestObj testObj = iterator.next();
+        }
+
+        System.out.println("end");
+    }
+}
+</code></pre>
+<p>这里需要注意的是需要先放入ArrayList中然后在通过CopyOnWriteArrayList构造函数中传入参数来实现这个测试。</p>
+<p>如果直接将3.2中的实例代码中的ArrayList改为CopyOnWriteArrayList，程序会花大量的时间用在初始化上。因为CopyOnWriteArrayList每次修改数据都会复制一个新的数组。这种效率上的消耗也是比较大。</p>
+<div id="3.4"class="dsd_title_c_2"><h4>3.4 采用ConcurrentHashMap替换HashMap</h4></div>
+<p>如果上述例子中的ArrayList替换为HashMap，也会出现这个异常。解决方案是：多线程环境修改和遍历HashMap，采用ConcurrentHashMap替换HashMap类，可以避免出现ConcurrentModificationException异常。</p>
+<p>示例代码:</p>
+<pre class="prettyprint"><code>package com.dashidan.faq4;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * 大屎蛋教程网-dashidan.com
+ * 4.ConcurrentModifyException的产生原因及如何避免
+ * Created by 大屎蛋 on 2018/5/24.
+ */
+public class Demo6 {
+    public static void main(String[] args) {
+        /** 初始化集合类*/
+        ConcurrentHashMap&lt;Integer, TestObj&gt; map = new ConcurrentHashMap&lt;&gt;();
+        for (int i = 0; i &lt; 1000000; i++) {
+            map.put(i, new TestObj(i));
+        }
+
+        /**启动一个线程随机删除数据*/
+        new Thread(new ThreadClass1(map)).start();
+
+        /** 遍历元素*/
+        Iterator&lt;TestObj&gt; iterator = map.values().iterator();
+        while (iterator.hasNext()) {
+            TestObj testObj = iterator.next();
+        }
+
+        System.out.println("end");
+    }
+}
+
+class ThreadClass1 implements Runnable {
+
+    Map&lt;Integer, TestObj&gt; map;
+
+    public ThreadClass1(Map&lt;Integer, TestObj&gt; map) {
+        this.map = map;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            if (map.size() &gt; 0) {
+                int index = new Random().nextInt(map.size());
+                map.remove(index);
+            }
+        }
+    }
+}
+</code></pre>
+<div id="4"><h3>4 其他方法</h3></div>
+<p>文中提到是作者常用的一些解决方案，还有其他的替代方案，比如采用同步锁等的方案等。在写代码的过程中多思考多总结。办法总比问题多。</p>
         </div>
     </div>
 </div>
@@ -1833,13 +2150,13 @@ for(int i = 0; i &lt; 10; i++) {
 
 <footer>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
-            <a href="https://dashidan.comarticle/java/jdk8/2.html"> &lt; 2.JDK8函数式接口</a>
+            <a href="https://dashidan.comarticle/java/faq/3.html"> &lt; 3.java ArrayListt原理及转化成数组常用方法</a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
         <a href="https://dashidan.comarticle/java/index.html">目录</a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-left">
-            <a href="https://dashidan.comarticle/java/jdk8/4.html"> 4.java拉姆达(Lambda)表达式应用 &gt;</a>
+            <a href="https://dashidan.comarticle/java/faq/5.html"> 5.Java随机数Random类 &gt;</a>
     </div>
 </footer>
 

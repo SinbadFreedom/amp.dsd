@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="canonical" href="https://dashidan.com/article/java/jdk8/3.html">
-    <title>java拉姆达(Lambda)表达式 - java教程 - 大屎蛋教程网</title>
-    <meta name="description" content="java拉姆达(Lambda)表达式由来.命令式编程与函数式编程.java为什么会引入拉姆达(Lambda)表达式.java Lambda表达式的优点.">
+    <link rel="canonical" href="https://dashidan.com/article/java/faq/5.html">
+    <title>5.Java随机数Random类 - java常见问题 - 大屎蛋教程网</title>
+    <meta name="description" content="随机数Random类是在做随机规则时需要用到的类。用途很广，比如随机抽奖，随机密码，随机验证码，随机奖励等，随机数，计算概率等。">
     <style amp-custom>
             html {
     -webkit-text-size-adjust: 100%;
@@ -1744,8 +1744,8 @@ footer > a {
     {
       "@context": "http://schema.org",
       "@type": "NewsArticle",
-      "headline": "java拉姆达(Lambda)表达式 - java教程 - 大屎蛋教程网",
-      "datePublished": "2018-05-26T15:09:21+08:00",
+      "headline": "5.Java随机数Random类 - java常见问题 - 大屎蛋教程网",
+      "datePublished": "2018-05-26T15:09:22+08:00",
       "author": "大屎蛋教程网",
       "image": "https://dashidan.com/img/dsd_google.png",
       "publisher": "大屎蛋教程网"
@@ -1766,65 +1766,89 @@ footer > a {
 <div class="container-fluid">
     <div class="text-left">
         <a href="https://amp.dashidan.comindex.html">首页</a> > <a
-            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 3.Java兰姆达(Lambda)表达式
+            href="https://amp.dashidan.comarticle/java/index.html">java</a> > 5.Java随机数Random类
     </div>
 
     <div class="dsd_content">
-        <div class="dsd_title"><h1>3.Java兰姆达(Lambda)表达式</h1></div>
+        <div class="dsd_title"><h1>5.Java随机数Random类</h1></div>
         <div id="xs_content_border">
-            <div><div class="dsd_catalog"><h3>目录</h3><a href="#1">1 什么是Lambda表达式</a><br><a href="#2">2 命令式编程(Imperative Programming)</a><br><a href="#3">3 函数式编程(Functional Programming)</a><br><a href="#4">4 Java为什么会引入Lambda表达式</a><br><a href="#5">5 java Lambda表达式的优点</a><br><a href="#6">6 参考文章</a></div></div><div class="jumbotron">
-    <p>javaJDK8.0开始引入了Lambda表达式,同时也是引入了一种新的编程思想-函数式编程(Functional Programming).Lambda表达式是函数式编程(Functional Programming)的基础.
-    </p>
+            <div><div class="dsd_catalog"><h3>目录</h3><a href="#1">1 随机生成一个整数</a><br><a href="#2">2 随机生成一定范围内的整数</a><br><a href="#3">3 随机从数组中取一个值</a><br><a href="#4">4 随机生成不重复的值</a></div></div><div class="jumbotron">
+<p>随机数Random类是在做随机规则时需要用到的类。用途很广，比如随机抽奖，随机密码，随机验证码，随机奖励等，随机数，计算概率等。</p>
 </div>
-<div id="1"><h3>1 什么是Lambda表达式</h3></div>
-<p>Lambda表达式(lambda expression)是<a href="https://dashidan.comarticle/java/jdk8/1.html">JDK8新增语法特性</a>之一, Lambda表达式一个匿名函数,Lambda表达式基于数学中的λ演算得名.编程中提到的lambda表达式,通常是在需要一个函数,但是又不想费神去命名一个函数的场合下使用,也就是指匿名函数.如果接口只有一个方法,这时使用匿名内部类时代码看上去不清晰也不简洁.在这种情况下,你会希望将函数(functionality)作为参数传递进去,来让代码看起来更加简洁.Lambda表达式可以实现这种需求,将函数作为方法参数,者将代码作为数据.可以将单方法(single-method)接口更加简洁.</p>
-<p><amp-img layout="responsive" src="https://dashidan.comimg/common/example.jpg" alt="举个栗子" width="224" height="296"></amp-img></p>
-<p>Comparable接口中只有一个方法compareTo.</p>
-<pre class="prettyprint"><code class="java language-java">/**
- * 大屎蛋教程网 http://dashidan.com
- */
-public interface Comparable&lt;T&gt; {
-    public int compareTo(T o);
+<div id="1"><h3>1 随机生成一个整数</h3></div>
+<pre class="prettyprint"><code>Random random = new Random();
+/** 随机产生一个整数，包括正负数*/
+for (int i = 0; i &lt; 100; i++) {
+    int r = random.nextInt();
+    System.out.println(r);
 }
 </code></pre>
-<div class="bs-callout bs-callout-warning">
-    在Java lambda的设计过程中,有一段时间是说所有的SAM(Single Abstract Method)类型(包括只有一个抽象方法的接口以及只有一个抽象方法的抽象类)都可以当作lambda表达式的目标类型,但后面真正的规范把设计收紧了,只支持单抽象方法的接口才算数.
-</div>
-<div id="2"><h3>2 命令式编程(Imperative Programming)</h3></div>
-<p>所有的命令式语言都被设计来高效地使用冯诺依曼体系结构的计算机.最初的命令式语言的目的就是取代汇编语言,对机器命令进行进一步抽象.因此,命令式语言带有强烈的硬件结构特征.命令式语言的核心特性有:模拟存储单元的变量、基于传输操作的赋值语句,以及迭代形式的循环运算.命令式语言的基础是语句(特别是赋值),它们通过修改存储器的值而产生副作用(side effect)的方式去影响后续的计算.</p>
-<p><amp-img layout="responsive" src="https://dashidan.comimg/common/example.jpg" alt="举个栗子" width="224" height="296"></amp-img></p>
-<p>在Java的典型的for循环中,通过修改变量<code>i</code>的值,来控制循环逻辑的执行.</p>
-<pre class="prettyprint"><code class="java language-java">/**
- * 大屎蛋教程网 http://dashidan.com
- */
-for(int i = 0; i &lt; 10; i++) {
-    ...
+<p>输出结果</p>
+<pre class="prettyprint"><code>...
+...
+-652449732
+-394876378
+-608984380
+2017359929
+1203463897
+606478979
+...
+...
+</code></pre>
+<div id="2"><h3>2 随机生成一定范围内的整数</h3></div>
+<p>Random提供的nextInt方法，可生成一个大于等于0 小于指定值的随机数。</p>
+<pre class="prettyprint"><code>/** 随机产生一个正整数，大于等于0 小于指定值*/
+for (int i = 0; i &lt; 100; i++) {
+    int r = random.nextInt(100);
+    System.out.println(r);
 }
 </code></pre>
-<div class="bs-callout bs-callout-warning">
-    在JDK8之前,Java没有引入Lambda之前可以说是个典型的命令式语言.在JDK8引入了Lambda表达式后,也随之引入了函数式编程的概念.
-</div>
-<div id="3"><h3>3 函数式编程(Functional Programming)</h3></div>
-<p>这种能够接受一个函数作为参数的函数叫做"高阶函数"(higher-order function),是来自函数式编程(functional programming)的思想.函数式编程将电脑运算视为函数的计算.函数式语言设计的基础是Lambda表达式,函数式语言进行计算的主要是将函数作用与给定参数之上.函数式语言没有命令式语言所必需的那种变量,可以没有赋值语句,也可以没有循环.一个程序就是函数定义和函数应用的说明,一个程序的执行就是对函数应用的求值.</p>
-<div id="4"><h3>4 Java为什么会引入Lambda表达式</h3></div>
-<p>之所以产生如Lambda表达式等这些新特性,背后的驱动力是硬件的多核化发展趋势.在此趋势下,芯片设计者只能采用多核并行的设计思路,而软件开发者必须能够更好地利用底层硬件的并发特性.Lambda表达式是函数式编程的基础,已经广泛的在其他语言中应用,比如 Groovy,Ruby,Python等.Java中的Lambda表达式和其他语言有所不同,在Java中Lambda是基于SAM(single abstract method)单方法接口实现.</p>
-<p>函数式编程对于Java语言来说是一个全新的视角,也是一种技术发展的趋势.在大数据发展越来越迅猛的时代,这个是Java跟随时代的需要做的必要改进.</p>
-<div id="5"><h3>5 java Lambda表达式的优点</h3></div>
-<ul>
-<li>更加紧凑的代码</li>
-</ul>
-<p>比如Java中现有的匿名内部类以及监听器(listeners)和事件处理器(handlers)都显得很冗长,可以通过Lambda表达式来降低代码量.</p>
-<ul>
-<li>更好地支持多核处理</li>
-</ul>
-<p>通过Java 8新增的Lambda表达式,可以很方便地并行操作大集合,充分发挥多核CPU的潜能.并行处理函数如filter、map和reduce.</p>
-<ul>
-<li>使集合操作得到了改善</li>
-</ul>
-<p>JDK8引入stream API.将大数据处理常用的map、reduce、filter这样的基本函数式编程的概念与Java集合结合起来.随之而来的是map、reduce、filter等操作都可以并行化,更加适合大数据的并行处理.</p>
-<div id="6"><h3>6 参考文章</h3></div>
-<p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html</a></p>
-<p><a href="https://www.developer.com/java/start-using-java-lambda-expressions.html">https://www.developer.com/java/start-using-java-lambda-expressions.html</a></p>
+<p>如果要生成一个范围值比如，100~200之间随机，采用100加上0到100的随机值就能实现。</p>
+<pre class="prettyprint"><code>for (int i = 0; i &lt; 100; i++) {
+    int r = 100 + random.nextInt(100);
+    System.out.println(r);
+}
+</code></pre>
+<div id="3"><h3>3 随机从数组中取一个值</h3></div>
+<p>原理是通过nextInt生成一个随机的索引，然后从数组中获取指定的索引。</p>
+<pre class="prettyprint"><code>/** 随机从数组中取一个值*/
+
+/** 初始化数组*/
+int[] arr = new int[100];
+for (int i = 0; i &lt; arr.length; i++) {
+    arr[i] = i + 1000;
+}
+
+/** 随机索引*/
+int index = random.nextInt(arr.length);
+/** 随机值*/
+int randomValue = arr[index];
+System.out.println(" randomValue " + randomValue);
+</code></pre>
+<div id="4"><h3>4 随机生成不重复的值</h3></div>
+<p>随机生成指定个数和范围不重复的值，最简单的方法是随机生成一个值，放入HashSet中，利用Set自带的去重功能，实现去重。数量不到就一直随机值，并且放入HashSet，直到数量满足条件。</p>
+<pre class="prettyprint"><code>/** 随机生成指定个数不重复的值*/
+HashSet&lt;Integer&gt; set = new HashSet&lt;&gt;();
+while (set.size() &lt; 10) {
+    set.add(random.nextInt(100));
+}
+
+for (Integer i : set) {
+    System.out.println("i " + i);
+}
+</code></pre>
+<p>输出结果:</p>
+<pre class="prettyprint"><code>i 33
+i 1
+i 50
+i 20
+i 42
+i 58
+i 12
+i 61
+i 30
+i 15
+</code></pre>
         </div>
     </div>
 </div>
@@ -1833,13 +1857,12 @@ for(int i = 0; i &lt; 10; i++) {
 
 <footer>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
-            <a href="https://dashidan.comarticle/java/jdk8/2.html"> &lt; 2.JDK8函数式接口</a>
+            <a href="https://dashidan.comarticle/java/faq/4.html"> &lt; 4.ConcurrentModifyException的产生原因及如何避免</a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
         <a href="https://dashidan.comarticle/java/index.html">目录</a>
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-left">
-            <a href="https://dashidan.comarticle/java/jdk8/4.html"> 4.java拉姆达(Lambda)表达式应用 &gt;</a>
     </div>
 </footer>
 
